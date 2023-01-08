@@ -1,0 +1,106 @@
+INFO  11:08:43,257 - Compiling source file: C:\Users\Jana\Desktop\SEDMI_SEMESTAR\PP1\Projekat\workspace\MJCompiler\test\testAnalyzer.mj
+INFO  11:08:43,300 - #2 program
+INFO  11:08:43,300 - #46 Program
+INFO  11:08:43,300 - #46 int
+INFO  11:08:43,301 - #46 x
+INFO  11:08:43,301 - #6 ,
+INFO  11:08:43,302 - #46 y
+INFO  11:08:43,302 - #5 ;
+INFO  11:08:43,302 - #3 {
+INFO  11:08:43,302 - #15 void
+INFO  11:08:43,303 - #46 k
+INFO  11:08:43,303 - #13 (
+INFO  11:08:43,304 - #14 )
+INFO  11:08:43,304 - #3 {
+INFO  11:08:43,305 - #4 }
+INFO  11:08:43,306 - #15 void
+INFO  11:08:43,307 - #46 main
+INFO  11:08:43,307 - #13 (
+INFO  11:08:43,307 - #14 )
+INFO  11:08:43,307 - #3 {
+INFO  11:08:43,307 - #46 k
+INFO  11:08:43,307 - #13 (
+INFO  11:08:43,315 - #14 )
+INFO  11:08:43,315 - #5 ;
+INFO  11:08:43,316 - #4 }
+INFO  11:08:43,317 - #4 }
+INFO  11:08:43,323 - Program(
+  ProgramName(
+   Program
+  ) [ProgramName]
+  Declarations(
+    NoDecl(
+    ) [NoDecl]
+    GlobalVarDeclaration(
+      GlobalVarDecl(
+        Type(
+         int
+        ) [Type]
+        GlobalVarIdentifierList(
+          SingleGlobalVarIdent(
+            GlobalVarIdentOne(
+             x
+            ) [GlobalVarIdentOne]
+          ) [SingleGlobalVarIdent]
+          GlobalVarIdentOne(
+           y
+          ) [GlobalVarIdentOne]
+        ) [GlobalVarIdentifierList]
+      ) [GlobalVarDecl]
+    ) [GlobalVarDeclaration]
+  ) [Declarations]
+  MethodDeclarations(
+    MethodDeclarations(
+      NoMethodDecl(
+      ) [NoMethodDecl]
+      MethodDecl(
+        MethodTypeName(
+          NoReturn(
+          ) [NoReturn]
+         k
+        ) [MethodTypeName]
+        ConstructorOrMethod(
+          NoFormPars(
+          ) [NoFormPars]
+          NoLocalVarDecl(
+          ) [NoLocalVarDecl]
+          NoStmt(
+          ) [NoStmt]
+        ) [ConstructorOrMethod]
+      ) [MethodDecl]
+    ) [MethodDeclarations]
+    MethodDecl(
+      MethodTypeName(
+        NoReturn(
+        ) [NoReturn]
+       main
+      ) [MethodTypeName]
+      ConstructorOrMethod(
+        NoFormPars(
+        ) [NoFormPars]
+        NoLocalVarDecl(
+        ) [NoLocalVarDecl]
+        Statements(
+          NoStmt(
+          ) [NoStmt]
+          DesignatorStmt(
+            DesignatorOtherStmt(
+              DesignatorMethodCall(
+                MethodCall(
+                  DesignatorIdent(
+                   k
+                  ) [DesignatorIdent]
+                  NoActuals(
+                  ) [NoActuals]
+                ) [MethodCall]
+              ) [DesignatorMethodCall]
+            ) [DesignatorOtherStmt]
+          ) [DesignatorStmt]
+        ) [Statements]
+      ) [ConstructorOrMethod]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  11:08:43,323 - ===================================
+INFO  11:08:43,326 - Obradjuje se funkcija k na liniji 6
+INFO  11:08:43,326 - Obradjuje se funkcija main na liniji 10

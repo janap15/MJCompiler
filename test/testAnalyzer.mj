@@ -1,0 +1,20 @@
+program Program 
+
+	int x, y;
+	char arr[];
+	
+{
+	int k(int a, int b) int c; {
+		c = a + b;
+		return c;
+	}
+	
+	
+	void main(){
+		k(x, y);
+		
+		[,x,] = arr;
+		read(x);
+		y = x + x;
+	}
+}

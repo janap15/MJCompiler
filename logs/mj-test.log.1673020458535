@@ -1,0 +1,93 @@
+INFO  16:54:10,982 - Compiling source file: C:\Users\Jana\Desktop\SEDMI_SEMESTAR\PP1\Projekat\workspace\MJCompiler\test\testAnalyzer.mj
+INFO  16:54:11,024 - #2 program
+INFO  16:54:11,025 - #46 Program
+INFO  16:54:11,025 - #46 int
+INFO  16:54:11,025 - #46 x
+INFO  16:54:11,026 - #6 ,
+INFO  16:54:11,026 - #46 y
+INFO  16:54:11,026 - #5 ;
+INFO  16:54:11,026 - #3 {
+INFO  16:54:11,027 - #15 void
+INFO  16:54:11,027 - #46 main
+INFO  16:54:11,028 - #13 (
+INFO  16:54:11,028 - #14 )
+INFO  16:54:11,028 - #3 {
+INFO  16:54:11,029 - #46 y
+INFO  16:54:11,029 - #7 =
+INFO  16:54:11,029 - #46 x
+INFO  16:54:11,029 - #5 ;
+INFO  16:54:11,029 - #4 }
+INFO  16:54:11,030 - #4 }
+INFO  16:54:11,036 - Program(
+  ProgramName(
+   Program
+  ) [ProgramName]
+  Declarations(
+    NoDecl(
+    ) [NoDecl]
+    GlobalVarDeclaration(
+      GlobalVarDecl(
+        Type(
+         int
+        ) [Type]
+        GlobalVarIdentifierList(
+          SingleGlobalVarIdent(
+            GlobalVarIdentOne(
+             x
+            ) [GlobalVarIdentOne]
+          ) [SingleGlobalVarIdent]
+          GlobalVarIdentOne(
+           y
+          ) [GlobalVarIdentOne]
+        ) [GlobalVarIdentifierList]
+      ) [GlobalVarDecl]
+    ) [GlobalVarDeclaration]
+  ) [Declarations]
+  MethodDeclarations(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethodTypeName(
+        NoReturn(
+        ) [NoReturn]
+       main
+      ) [MethodTypeName]
+      ConstructorOrMethod(
+        NoFormPars(
+        ) [NoFormPars]
+        NoLocalVarDecl(
+        ) [NoLocalVarDecl]
+        Statements(
+          NoStmt(
+          ) [NoStmt]
+          DesignatorStmt(
+            DesignatorAssignStatement(
+              DesignatorIdent(
+               y
+              ) [DesignatorIdent]
+              DesignatorAssignment(
+                ExprTerm(
+                  TermSingle(
+                    FactorSingle(
+                      FactorDesignator(
+                        DesignatorIdent(
+                         x
+                        ) [DesignatorIdent]
+                      ) [FactorDesignator]
+                    ) [FactorSingle]
+                  ) [TermSingle]
+                ) [ExprTerm]
+              ) [DesignatorAssignment]
+            ) [DesignatorAssignStatement]
+          ) [DesignatorStmt]
+        ) [Statements]
+      ) [ConstructorOrMethod]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  16:54:11,036 - ===================================
+INFO  16:54:11,039 - Obradjuje se funkcija main na liniji 13
+INFO  16:54:11,039 -  y na liniji 18
+INFO  16:54:11,039 -  rs.etf.pp1.symboltable.concepts.Obj@5e9f23b4 na liniji 18
+INFO  16:54:11,039 -  x na liniji 18
+INFO  16:54:11,039 -  rs.etf.pp1.symboltable.concepts.Obj@4783da3f na liniji 18

@@ -1,0 +1,37 @@
+// test za oporavak - sintaksna analiza B nivo
+
+program p
+
+const int size = 10;
+class A {
+	int a[], arr[, b, c;
+	int , ;
+	int , d;
+	prom 
+	{
+	}
+}
+class B extends {
+	int a[, , b, c, ;
+	{
+		void fun(){
+		
+		}
+	}
+}
+class C extends A, B {
+	bool a;
+	{
+	}
+}
+A globalA;
+{
+	void f(char ch, int a, int arg)
+		int x;
+	{
+		x = arg;
+	}
+	void main() int x, i; char c;
+	{
+	}
+}

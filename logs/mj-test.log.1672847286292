@@ -1,0 +1,209 @@
+INFO  16:47:47,366 - Compiling source file: C:\Users\Jana\Desktop\SEDMI_SEMESTAR\PP1\Projekat\workspace\MJCompiler\test\testAnalyzer.mj
+INFO  16:47:47,413 - #2 program
+INFO  16:47:47,413 - #46 Program
+INFO  16:47:47,413 - #46 int
+INFO  16:47:47,414 - #46 x
+INFO  16:47:47,414 - #6 ,
+INFO  16:47:47,414 - #46 y
+INFO  16:47:47,415 - #5 ;
+INFO  16:47:47,415 - #46 int
+INFO  16:47:47,415 - #46 x
+INFO  16:47:47,415 - #5 ;
+INFO  16:47:47,415 - #3 {
+INFO  16:47:47,415 - #46 int
+INFO  16:47:47,416 - #46 k
+INFO  16:47:47,416 - #13 (
+INFO  16:47:47,416 - #46 int
+INFO  16:47:47,417 - #46 a
+INFO  16:47:47,417 - #6 ,
+INFO  16:47:47,417 - #46 int
+INFO  16:47:47,417 - #46 b
+INFO  16:47:47,417 - #14 )
+INFO  16:47:47,417 - #3 {
+INFO  16:47:47,418 - #21 return
+INFO  16:47:47,419 - #46 c
+INFO  16:47:47,419 - #5 ;
+INFO  16:47:47,420 - #4 }
+INFO  16:47:47,420 - #46 int
+INFO  16:47:47,422 - #46 k
+INFO  16:47:47,422 - #13 (
+INFO  16:47:47,422 - #14 )
+INFO  16:47:47,422 - #3 {
+INFO  16:47:47,423 - #4 }
+INFO  16:47:47,423 - #15 void
+INFO  16:47:47,423 - #46 main
+INFO  16:47:47,423 - #13 (
+INFO  16:47:47,423 - #14 )
+INFO  16:47:47,423 - #3 {
+INFO  16:47:47,423 - #46 k
+INFO  16:47:47,423 - #13 (
+INFO  16:47:47,423 - #14 )
+INFO  16:47:47,424 - #5 ;
+INFO  16:47:47,424 - #22 read
+INFO  16:47:47,425 - #13 (
+INFO  16:47:47,425 - #46 x
+INFO  16:47:47,425 - #14 )
+INFO  16:47:47,425 - #5 ;
+INFO  16:47:47,425 - #4 }
+INFO  16:47:47,426 - #4 }
+INFO  16:47:47,431 - Program(
+  ProgramName(
+   Program
+  ) [ProgramName]
+  Declarations(
+    Declarations(
+      NoDecl(
+      ) [NoDecl]
+      GlobalVarDeclaration(
+        GlobalVarDecl(
+          Type(
+           int
+          ) [Type]
+          GlobalVarIdentifierList(
+            SingleGlobalVarIdent(
+              GlobalVarIdentOne(
+               x
+              ) [GlobalVarIdentOne]
+            ) [SingleGlobalVarIdent]
+            GlobalVarIdentOne(
+             y
+            ) [GlobalVarIdentOne]
+          ) [GlobalVarIdentifierList]
+        ) [GlobalVarDecl]
+      ) [GlobalVarDeclaration]
+    ) [Declarations]
+    GlobalVarDeclaration(
+      GlobalVarDecl(
+        Type(
+         int
+        ) [Type]
+        SingleGlobalVarIdent(
+          GlobalVarIdentOne(
+           x
+          ) [GlobalVarIdentOne]
+        ) [SingleGlobalVarIdent]
+      ) [GlobalVarDecl]
+    ) [GlobalVarDeclaration]
+  ) [Declarations]
+  MethodDeclarations(
+    MethodDeclarations(
+      MethodDeclarations(
+        NoMethodDecl(
+        ) [NoMethodDecl]
+        MethodDecl(
+          MethodTypeName(
+            RetType(
+              Type(
+               int
+              ) [Type]
+            ) [RetType]
+           k
+          ) [MethodTypeName]
+          ConstructorOrMethod(
+            FormParams(
+              FormalParamDeclarations(
+                FormalParamDeclarationSingle(
+                  FormalParamDeclaration(
+                    Type(
+                     int
+                    ) [Type]
+                   a
+                  ) [FormalParamDeclaration]
+                ) [FormalParamDeclarationSingle]
+                FormalParamDeclaration(
+                  Type(
+                   int
+                  ) [Type]
+                 b
+                ) [FormalParamDeclaration]
+              ) [FormalParamDeclarations]
+            ) [FormParams]
+            NoLocalVarDecl(
+            ) [NoLocalVarDecl]
+            Statements(
+              NoStmt(
+              ) [NoStmt]
+              ReturnExpr(
+                ReturnBegin(
+                ) [ReturnBegin]
+                ExprOptionalSingle(
+                  ExprTerm(
+                    TermSingle(
+                      FactorSingle(
+                        FactorDesignator(
+                          DesignatorIdent(
+                           c
+                          ) [DesignatorIdent]
+                        ) [FactorDesignator]
+                      ) [FactorSingle]
+                    ) [TermSingle]
+                  ) [ExprTerm]
+                ) [ExprOptionalSingle]
+              ) [ReturnExpr]
+            ) [Statements]
+          ) [ConstructorOrMethod]
+        ) [MethodDecl]
+      ) [MethodDeclarations]
+      MethodDecl(
+        MethodTypeName(
+          RetType(
+            Type(
+             int
+            ) [Type]
+          ) [RetType]
+         k
+        ) [MethodTypeName]
+        ConstructorOrMethod(
+          NoFormPars(
+          ) [NoFormPars]
+          NoLocalVarDecl(
+          ) [NoLocalVarDecl]
+          NoStmt(
+          ) [NoStmt]
+        ) [ConstructorOrMethod]
+      ) [MethodDecl]
+    ) [MethodDeclarations]
+    MethodDecl(
+      MethodTypeName(
+        NoReturn(
+        ) [NoReturn]
+       main
+      ) [MethodTypeName]
+      ConstructorOrMethod(
+        NoFormPars(
+        ) [NoFormPars]
+        NoLocalVarDecl(
+        ) [NoLocalVarDecl]
+        Statements(
+          Statements(
+            NoStmt(
+            ) [NoStmt]
+            DesignatorStmt(
+              DesignatorOtherStmt(
+                DesignatorMethodCall(
+                  MethodCall(
+                    DesignatorIdent(
+                     k
+                    ) [DesignatorIdent]
+                    NoActuals(
+                    ) [NoActuals]
+                  ) [MethodCall]
+                ) [DesignatorMethodCall]
+              ) [DesignatorOtherStmt]
+            ) [DesignatorStmt]
+          ) [Statements]
+          ReadStatement(
+            ReadBegin(
+            ) [ReadBegin]
+            DesignatorIdent(
+             x
+            ) [DesignatorIdent]
+          ) [ReadStatement]
+        ) [Statements]
+      ) [ConstructorOrMethod]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  16:47:47,431 - ===================================
+INFO  16:47:47,434 - Semanticka greska na liniji 4: Simbol x je vec upotrebljen!
+INFO  16:47:47,434 - Obradjuje se funkcija k na liniji 7

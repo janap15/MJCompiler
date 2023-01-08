@@ -1,0 +1,142 @@
+INFO  11:14:47,469 - Compiling source file: C:\Users\Jana\Desktop\SEDMI_SEMESTAR\PP1\Projekat\workspace\MJCompiler\test\testAnalyzer.mj
+INFO  11:14:47,512 - #2 program
+INFO  11:14:47,512 - #46 Program
+INFO  11:14:47,512 - #46 int
+INFO  11:14:47,513 - #46 x
+INFO  11:14:47,514 - #6 ,
+INFO  11:14:47,514 - #46 y
+INFO  11:14:47,514 - #5 ;
+INFO  11:14:47,514 - #46 int
+INFO  11:14:47,515 - #46 x
+INFO  11:14:47,515 - #5 ;
+INFO  11:14:47,515 - #3 {
+INFO  11:14:47,515 - #15 void
+INFO  11:14:47,516 - #46 k
+INFO  11:14:47,516 - #13 (
+INFO  11:14:47,516 - #46 int
+INFO  11:14:47,517 - #46 a
+INFO  11:14:47,517 - #6 ,
+INFO  11:14:47,517 - #46 int
+INFO  11:14:47,517 - #46 b
+INFO  11:14:47,517 - #14 )
+INFO  11:14:47,517 - #3 {
+INFO  11:14:47,525 - #4 }
+INFO  11:14:47,526 - #15 void
+INFO  11:14:47,527 - #46 main
+INFO  11:14:47,527 - #13 (
+INFO  11:14:47,527 - #14 )
+INFO  11:14:47,527 - #3 {
+INFO  11:14:47,528 - #46 k
+INFO  11:14:47,528 - #13 (
+INFO  11:14:47,528 - #14 )
+INFO  11:14:47,528 - #5 ;
+INFO  11:14:47,529 - #4 }
+INFO  11:14:47,529 - #4 }
+INFO  11:14:47,534 - Program(
+  ProgramName(
+   Program
+  ) [ProgramName]
+  Declarations(
+    Declarations(
+      NoDecl(
+      ) [NoDecl]
+      GlobalVarDeclaration(
+        GlobalVarDecl(
+          Type(
+           int
+          ) [Type]
+          GlobalVarIdentifierList(
+            SingleGlobalVarIdent(
+              GlobalVarIdentOne(
+               x
+              ) [GlobalVarIdentOne]
+            ) [SingleGlobalVarIdent]
+            GlobalVarIdentOne(
+             y
+            ) [GlobalVarIdentOne]
+          ) [GlobalVarIdentifierList]
+        ) [GlobalVarDecl]
+      ) [GlobalVarDeclaration]
+    ) [Declarations]
+    GlobalVarDeclaration(
+      GlobalVarDecl(
+        Type(
+         int
+        ) [Type]
+        SingleGlobalVarIdent(
+          GlobalVarIdentOne(
+           x
+          ) [GlobalVarIdentOne]
+        ) [SingleGlobalVarIdent]
+      ) [GlobalVarDecl]
+    ) [GlobalVarDeclaration]
+  ) [Declarations]
+  MethodDeclarations(
+    MethodDeclarations(
+      NoMethodDecl(
+      ) [NoMethodDecl]
+      MethodDecl(
+        MethodTypeName(
+          NoReturn(
+          ) [NoReturn]
+         k
+        ) [MethodTypeName]
+        ConstructorOrMethod(
+          FormParams(
+            FormalParamDeclarations(
+              FormalParamDeclarationSingle(
+                FormalParamDeclaration(
+                  Type(
+                   int
+                  ) [Type]
+                 a
+                ) [FormalParamDeclaration]
+              ) [FormalParamDeclarationSingle]
+              FormalParamDeclaration(
+                Type(
+                 int
+                ) [Type]
+               b
+              ) [FormalParamDeclaration]
+            ) [FormalParamDeclarations]
+          ) [FormParams]
+          NoLocalVarDecl(
+          ) [NoLocalVarDecl]
+          NoStmt(
+          ) [NoStmt]
+        ) [ConstructorOrMethod]
+      ) [MethodDecl]
+    ) [MethodDeclarations]
+    MethodDecl(
+      MethodTypeName(
+        NoReturn(
+        ) [NoReturn]
+       main
+      ) [MethodTypeName]
+      ConstructorOrMethod(
+        NoFormPars(
+        ) [NoFormPars]
+        NoLocalVarDecl(
+        ) [NoLocalVarDecl]
+        Statements(
+          NoStmt(
+          ) [NoStmt]
+          DesignatorStmt(
+            DesignatorOtherStmt(
+              DesignatorMethodCall(
+                MethodCall(
+                  DesignatorIdent(
+                   k
+                  ) [DesignatorIdent]
+                  NoActuals(
+                  ) [NoActuals]
+                ) [MethodCall]
+              ) [DesignatorMethodCall]
+            ) [DesignatorOtherStmt]
+          ) [DesignatorStmt]
+        ) [Statements]
+      ) [ConstructorOrMethod]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  11:14:47,534 - ===================================

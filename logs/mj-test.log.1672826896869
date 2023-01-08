@@ -1,0 +1,147 @@
+INFO  11:06:19,576 - Compiling source file: C:\Users\Jana\Desktop\SEDMI_SEMESTAR\PP1\Projekat\workspace\MJCompiler\test\testAnalyzer.mj
+INFO  11:06:19,636 - #2 program
+INFO  11:06:19,636 - #46 Program
+INFO  11:06:19,636 - #46 int
+INFO  11:06:19,637 - #46 x
+INFO  11:06:19,638 - #6 ,
+INFO  11:06:19,638 - #46 y
+INFO  11:06:19,638 - #5 ;
+INFO  11:06:19,639 - #3 {
+INFO  11:06:19,639 - #46 int
+INFO  11:06:19,640 - #46 k
+INFO  11:06:19,640 - #13 (
+INFO  11:06:19,641 - #14 )
+INFO  11:06:19,641 - #3 {
+INFO  11:06:19,642 - #21 return
+ERROR 11:06:19,642 - Sintaksna greska na liniji 7
+ERROR 11:06:19,642 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 7
+INFO  11:06:53,747 - Compiling source file: C:\Users\Jana\Desktop\SEDMI_SEMESTAR\PP1\Projekat\workspace\MJCompiler\test\testAnalyzer.mj
+INFO  11:06:53,789 - #2 program
+INFO  11:06:53,789 - #46 Program
+INFO  11:06:53,789 - #46 int
+INFO  11:06:53,790 - #46 x
+INFO  11:06:53,790 - #6 ,
+INFO  11:06:53,791 - #46 y
+INFO  11:06:53,791 - #5 ;
+INFO  11:06:53,791 - #3 {
+INFO  11:06:53,791 - #46 int
+INFO  11:06:53,791 - #46 k
+INFO  11:06:53,792 - #13 (
+INFO  11:06:53,792 - #14 )
+INFO  11:06:53,792 - #3 {
+INFO  11:06:53,793 - #21 return
+INFO  11:06:53,793 - #46 c
+INFO  11:06:53,794 - #5 ;
+INFO  11:06:53,794 - #4 }
+INFO  11:06:53,794 - #15 void
+INFO  11:06:53,795 - #46 main
+INFO  11:06:53,796 - #13 (
+INFO  11:06:53,796 - #14 )
+INFO  11:06:53,796 - #3 {
+INFO  11:06:53,796 - #46 k
+INFO  11:06:53,796 - #13 (
+INFO  11:06:53,796 - #14 )
+INFO  11:06:53,797 - #5 ;
+INFO  11:06:53,797 - #4 }
+INFO  11:06:53,797 - #4 }
+INFO  11:06:53,804 - Program(
+  ProgramName(
+   Program
+  ) [ProgramName]
+  Declarations(
+    NoDecl(
+    ) [NoDecl]
+    GlobalVarDeclaration(
+      GlobalVarDecl(
+        Type(
+         int
+        ) [Type]
+        GlobalVarIdentifierList(
+          SingleGlobalVarIdent(
+            GlobalVarIdentOne(
+             x
+            ) [GlobalVarIdentOne]
+          ) [SingleGlobalVarIdent]
+          GlobalVarIdentOne(
+           y
+          ) [GlobalVarIdentOne]
+        ) [GlobalVarIdentifierList]
+      ) [GlobalVarDecl]
+    ) [GlobalVarDeclaration]
+  ) [Declarations]
+  MethodDeclarations(
+    MethodDeclarations(
+      NoMethodDecl(
+      ) [NoMethodDecl]
+      MethodDecl(
+        MethodTypeName(
+          RetType(
+            Type(
+             int
+            ) [Type]
+          ) [RetType]
+         k
+        ) [MethodTypeName]
+        ConstructorOrMethod(
+          NoFormPars(
+          ) [NoFormPars]
+          NoLocalVarDecl(
+          ) [NoLocalVarDecl]
+          Statements(
+            NoStmt(
+            ) [NoStmt]
+            ReturnExpr(
+              ReturnBegin(
+              ) [ReturnBegin]
+              ExprOptionalSingle(
+                SingleExprTerm(
+                  TermSingle(
+                    SingleFactor(
+                      Var(
+                        DesignatorIdent(
+                         c
+                        ) [DesignatorIdent]
+                      ) [Var]
+                    ) [SingleFactor]
+                  ) [TermSingle]
+                ) [SingleExprTerm]
+              ) [ExprOptionalSingle]
+            ) [ReturnExpr]
+          ) [Statements]
+        ) [ConstructorOrMethod]
+      ) [MethodDecl]
+    ) [MethodDeclarations]
+    MethodDecl(
+      MethodTypeName(
+        NoReturn(
+        ) [NoReturn]
+       main
+      ) [MethodTypeName]
+      ConstructorOrMethod(
+        NoFormPars(
+        ) [NoFormPars]
+        NoLocalVarDecl(
+        ) [NoLocalVarDecl]
+        Statements(
+          NoStmt(
+          ) [NoStmt]
+          DesignatorStmt(
+            DesignatorOtherStmt(
+              DesignatorMethodCall(
+                MethodCall(
+                  DesignatorIdent(
+                   k
+                  ) [DesignatorIdent]
+                  NoActuals(
+                  ) [NoActuals]
+                ) [MethodCall]
+              ) [DesignatorMethodCall]
+            ) [DesignatorOtherStmt]
+          ) [DesignatorStmt]
+        ) [Statements]
+      ) [ConstructorOrMethod]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  11:06:53,805 - ===================================
+INFO  11:06:53,808 - Obradjuje se funkcija k na liniji 6

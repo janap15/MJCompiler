@@ -1,0 +1,317 @@
+INFO  23:35:02,861 - Compiling source file: C:\Users\Jana\Desktop\SEDMI_SEMESTAR\PP1\Projekat\workspace\MJCompiler\test\test0201.mj
+INFO  23:35:02,892 - #2 program
+INFO  23:35:02,892 - #46 Program
+INFO  23:35:02,892 - #8 const
+INFO  23:35:02,892 - #46 int
+INFO  23:35:02,892 - #46 consta
+INFO  23:35:02,892 - #7 =
+INFO  23:35:02,892 - #47 50
+INFO  23:35:02,892 - #5 ;
+INFO  23:35:02,892 - #46 bool
+INFO  23:35:02,892 - #46 boo
+INFO  23:35:02,892 - #46 boo
+ERROR 23:35:02,892 - Sintaksna greska na liniji 3
+INFO  23:35:02,892 - #5 ;
+INFO  23:35:02,892 - #46 int
+ERROR 23:35:02,892 - Uspesan oporavak od greske pri deklaraciji globalne promenljive
+INFO  23:35:02,892 - #46 f
+INFO  23:35:02,892 - #9 [
+INFO  23:35:02,892 - #10 ]
+INFO  23:35:02,914 - #6 ,
+INFO  23:35:02,914 - #6 ,
+ERROR 23:35:02,914 - Sintaksna greska na liniji 4
+INFO  23:35:02,914 - #9 [
+ERROR 23:35:02,914 - Uspesan oporavak od greske pri deklaraciji globalne promenljive
+ERROR 23:35:02,914 - Sintaksna greska na liniji 4
+INFO  23:35:02,914 - #6 ,
+INFO  23:35:02,914 - #10 ]
+ERROR 23:35:02,914 - Uspesan oporavak od greske pri deklaraciji globalne promenljive
+ERROR 23:35:02,914 - Sintaksna greska na liniji 4
+INFO  23:35:02,914 - #6 ,
+INFO  23:35:02,914 - #46 j
+ERROR 23:35:02,914 - Uspesan oporavak od greske pri deklaraciji globalne promenljive
+INFO  23:35:02,914 - #5 ;
+INFO  23:35:02,914 - #46 char
+INFO  23:35:02,914 - #9 [
+ERROR 23:35:02,914 - Sintaksna greska na liniji 5
+INFO  23:35:02,914 - #10 ]
+INFO  23:35:02,914 - #6 ,
+INFO  23:35:02,914 - #46 ch
+ERROR 23:35:02,914 - Uspesan oporavak od greske pri deklaraciji globalne promenljive
+INFO  23:35:02,914 - #5 ;
+INFO  23:35:02,914 - #46 int
+INFO  23:35:02,914 - #5 ;
+ERROR 23:35:02,914 - Sintaksna greska na liniji 6
+INFO  23:35:02,914 - #46 bool
+ERROR 23:35:02,914 - Uspesan oporavak od greske pri deklaraciji globalne promenljive
+INFO  23:35:02,914 - #6 ,
+ERROR 23:35:02,914 - Sintaksna greska na liniji 7
+INFO  23:35:02,914 - #5 ;
+ERROR 23:35:02,914 - Uspesan oporavak od greske pri deklaraciji globalne promenljive
+ERROR 23:35:02,914 - Sintaksna greska na liniji 7
+INFO  23:35:02,914 - #3 {
+ERROR 23:35:02,914 - Uspesan oporavak od greske pri deklaraciji globalne promenljive
+INFO  23:35:02,914 - #15 void
+INFO  23:35:02,914 - #46 main
+INFO  23:35:02,914 - #13 (
+INFO  23:35:02,914 - #14 )
+INFO  23:35:02,914 - #46 int
+INFO  23:35:02,914 - #46 a
+INFO  23:35:02,914 - #6 ,
+INFO  23:35:02,914 - #46 b
+INFO  23:35:02,914 - #6 ,
+INFO  23:35:02,914 - #46 c
+INFO  23:35:02,914 - #5 ;
+INFO  23:35:02,914 - #3 {
+INFO  23:35:02,914 - #46 b
+INFO  23:35:02,914 - #7 =
+INFO  23:35:02,914 - #46 a
+INFO  23:35:02,914 - #32 +
+INFO  23:35:02,914 - #5 ;
+ERROR 23:35:02,914 - Sintaksna greska na liniji 11
+INFO  23:35:02,914 - #46 c
+INFO  23:35:02,914 - Uspesan oporavak od greske  pri konstrukciji iskaza dodele
+INFO  23:35:02,914 - #7 =
+INFO  23:35:02,914 - #46 a
+INFO  23:35:02,914 - #33 -
+INFO  23:35:02,914 - #33 -
+ERROR 23:35:02,914 - Sintaksna greska na liniji 12
+INFO  23:35:02,914 - #46 c
+INFO  23:35:02,914 - #5 ;
+INFO  23:35:02,914 - #46 a
+INFO  23:35:02,914 - Uspesan oporavak od greske  pri konstrukciji iskaza dodele
+INFO  23:35:02,914 - #7 =
+INFO  23:35:02,914 - #46 b
+INFO  23:35:02,914 - #46 c
+ERROR 23:35:02,914 - Sintaksna greska na liniji 13
+INFO  23:35:02,914 - #5 ;
+INFO  23:35:02,914 - #46 a
+INFO  23:35:02,914 - Uspesan oporavak od greske  pri konstrukciji iskaza dodele
+INFO  23:35:02,914 - #7 =
+INFO  23:35:02,914 - #5 ;
+ERROR 23:35:02,914 - Sintaksna greska na liniji 14
+INFO  23:35:02,914 - #46 b
+INFO  23:35:02,914 - Uspesan oporavak od greske  pri konstrukciji iskaza dodele
+INFO  23:35:02,914 - #7 =
+INFO  23:35:02,914 - #5 ;
+ERROR 23:35:02,914 - Sintaksna greska na liniji 15
+INFO  23:35:02,914 - #4 }
+INFO  23:35:02,914 - Uspesan oporavak od greske  pri konstrukciji iskaza dodele
+INFO  23:35:02,914 - #4 }
+INFO  23:35:02,914 - Program(
+  ProgName(
+   Program
+  ) [ProgName]
+  Declarations(
+    Declarations(
+      Declarations(
+        Declarations(
+          Declarations(
+            Declarations(
+              NoDecl(
+              ) [NoDecl]
+              ConstDeclType(
+                ConstDecl(
+                  Type(
+                   int
+                  ) [Type]
+                  SingleConstIdent(
+                    ConstIdent(
+                     consta
+                      NumConst(
+                       50
+                      ) [NumConst]
+                    ) [ConstIdent]
+                  ) [SingleConstIdent]
+                ) [ConstDecl]
+              ) [ConstDeclType]
+            ) [Declarations]
+            GlobalVarDeclType(
+              GlobalVarDecl(
+                Type(
+                 bool
+                ) [Type]
+                SingleGlobalVarIdent(
+                  ErrGlobalVar(
+                  ) [ErrGlobalVar]
+                ) [SingleGlobalVarIdent]
+              ) [GlobalVarDecl]
+            ) [GlobalVarDeclType]
+          ) [Declarations]
+          GlobalVarDeclType(
+            GlobalVarDecl(
+              Type(
+               int
+              ) [Type]
+              GlobalVarIdentifierList(
+                GlobalVarIdentifierList(
+                  GlobalVarIdentifierList(
+                    GlobalVarIdentifierList(
+                      SingleGlobalVarIdent(
+                        GlobalVarIdentifierArray(
+                         f
+                          Brackets(
+                          ) [Brackets]
+                        ) [GlobalVarIdentifierArray]
+                      ) [SingleGlobalVarIdent]
+                      ErrGlobalVar(
+                      ) [ErrGlobalVar]
+                    ) [GlobalVarIdentifierList]
+                    ErrGlobalVar(
+                    ) [ErrGlobalVar]
+                  ) [GlobalVarIdentifierList]
+                  ErrGlobalVar(
+                  ) [ErrGlobalVar]
+                ) [GlobalVarIdentifierList]
+                GlobalVarIdentOne(
+                 j
+                ) [GlobalVarIdentOne]
+              ) [GlobalVarIdentifierList]
+            ) [GlobalVarDecl]
+          ) [GlobalVarDeclType]
+        ) [Declarations]
+        GlobalVarDeclType(
+          GlobalVarDecl(
+            Type(
+             char
+            ) [Type]
+            GlobalVarIdentifierList(
+              SingleGlobalVarIdent(
+                ErrGlobalVar(
+                ) [ErrGlobalVar]
+              ) [SingleGlobalVarIdent]
+              GlobalVarIdentOne(
+               ch
+              ) [GlobalVarIdentOne]
+            ) [GlobalVarIdentifierList]
+          ) [GlobalVarDecl]
+        ) [GlobalVarDeclType]
+      ) [Declarations]
+      GlobalVarDeclType(
+        GlobalVarDecl(
+          Type(
+           int
+          ) [Type]
+          SingleGlobalVarIdent(
+            ErrGlobalVar(
+            ) [ErrGlobalVar]
+          ) [SingleGlobalVarIdent]
+        ) [GlobalVarDecl]
+      ) [GlobalVarDeclType]
+    ) [Declarations]
+    GlobalVarDeclType(
+      GlobalVarDecl(
+        Type(
+         bool
+        ) [Type]
+        GlobalVarIdentifierList(
+          SingleGlobalVarIdent(
+            ErrGlobalVar(
+            ) [ErrGlobalVar]
+          ) [SingleGlobalVarIdent]
+          ErrGlobalVar(
+          ) [ErrGlobalVar]
+        ) [GlobalVarIdentifierList]
+      ) [GlobalVarDecl]
+    ) [GlobalVarDeclType]
+  ) [Declarations]
+  MethodDeclarations(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethType(
+        NoRet(
+        ) [NoRet]
+      ) [MethType]
+      ConstructorOrMethod(
+       main
+        NoFormPars(
+        ) [NoFormPars]
+        LocalVarDeclarations(
+          NoLocalVarDecl(
+          ) [NoLocalVarDecl]
+          LocalVarDeclaration(
+            Type(
+             int
+            ) [Type]
+            LocalVarIdentifierList(
+              LocalVarIdentifierList(
+                SingleLocalVarIdent(
+                  LocalVarIdentifierOne(
+                   a
+                  ) [LocalVarIdentifierOne]
+                ) [SingleLocalVarIdent]
+                LocalVarIdentifierOne(
+                 b
+                ) [LocalVarIdentifierOne]
+              ) [LocalVarIdentifierList]
+              LocalVarIdentifierOne(
+               c
+              ) [LocalVarIdentifierOne]
+            ) [LocalVarIdentifierList]
+          ) [LocalVarDeclaration]
+        ) [LocalVarDeclarations]
+        Statements(
+          Statements(
+            Statements(
+              Statements(
+                Statements(
+                  NoStmt(
+                  ) [NoStmt]
+                  DesignatorStmt(
+                    DesignatorAssignStmt(
+                      DesignatorIdent(
+                       b
+                      ) [DesignatorIdent]
+                      ErrDesignAssign(
+                      ) [ErrDesignAssign]
+                    ) [DesignatorAssignStmt]
+                  ) [DesignatorStmt]
+                ) [Statements]
+                DesignatorStmt(
+                  DesignatorAssignStmt(
+                    DesignatorIdent(
+                     c
+                    ) [DesignatorIdent]
+                    ErrDesignAssign(
+                    ) [ErrDesignAssign]
+                  ) [DesignatorAssignStmt]
+                ) [DesignatorStmt]
+              ) [Statements]
+              DesignatorStmt(
+                DesignatorAssignStmt(
+                  DesignatorIdent(
+                   a
+                  ) [DesignatorIdent]
+                  ErrDesignAssign(
+                  ) [ErrDesignAssign]
+                ) [DesignatorAssignStmt]
+              ) [DesignatorStmt]
+            ) [Statements]
+            DesignatorStmt(
+              DesignatorAssignStmt(
+                DesignatorIdent(
+                 a
+                ) [DesignatorIdent]
+                ErrDesignAssign(
+                ) [ErrDesignAssign]
+              ) [DesignatorAssignStmt]
+            ) [DesignatorStmt]
+          ) [Statements]
+          DesignatorStmt(
+            DesignatorAssignStmt(
+              DesignatorIdent(
+               b
+              ) [DesignatorIdent]
+              ErrDesignAssign(
+              ) [ErrDesignAssign]
+            ) [DesignatorAssignStmt]
+          ) [DesignatorStmt]
+        ) [Statements]
+      ) [ConstructorOrMethod]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  23:35:02,914 - ===================================
+INFO  23:35:02,914 -  Print count calls = 0
+INFO  23:35:02,914 -  Deklarisanih promenljivih ima = 3

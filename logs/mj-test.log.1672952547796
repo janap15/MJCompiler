@@ -1,0 +1,119 @@
+INFO  22:01:28,341 - Compiling source file: C:\Users\Jana\Desktop\SEDMI_SEMESTAR\PP1\Projekat\workspace\MJCompiler\test\test204.mj
+INFO  22:01:28,384 - #2 program
+INFO  22:01:28,384 - #46 p
+INFO  22:01:28,384 - #8 const
+INFO  22:01:28,385 - #46 int
+INFO  22:01:28,385 - #46 size
+INFO  22:01:28,386 - #7 =
+INFO  22:01:28,386 - #47 10
+INFO  22:01:28,386 - #5 ;
+INFO  22:01:28,386 - #11 class
+INFO  22:01:28,387 - #46 A
+INFO  22:01:28,387 - #3 {
+INFO  22:01:28,388 - #46 int
+INFO  22:01:28,388 - #46 a
+INFO  22:01:28,389 - #9 [
+INFO  22:01:28,389 - #10 ]
+INFO  22:01:28,389 - #6 ,
+INFO  22:01:28,389 - #46 arr
+INFO  22:01:28,390 - #9 [
+INFO  22:01:28,390 - #6 ,
+ERROR 22:01:28,390 - Sintaksna greska na liniji 7
+INFO  22:01:28,398 - #46 b
+INFO  22:01:28,398 - #6 ,
+INFO  22:01:28,398 - #46 c
+INFO  22:01:28,399 - #5 ;
+INFO  22:01:28,399 - #46 int
+ERROR 22:01:28,399 - Oporavak od greske pri deklaraciji polja unutrasnje klase do ;
+INFO  22:01:28,400 - #6 ,
+ERROR 22:01:28,400 - Sintaksna greska na liniji 8
+INFO  22:01:28,400 - #5 ;
+INFO  22:01:28,400 - #46 int
+ERROR 22:01:28,400 - Oporavak od greske pri deklaraciji polja unutrasnje klase do ;
+INFO  22:01:28,400 - #6 ,
+ERROR 22:01:28,400 - Sintaksna greska na liniji 9
+INFO  22:01:28,400 - #46 d
+INFO  22:01:28,400 - #5 ;
+INFO  22:01:28,400 - #46 prom
+ERROR 22:01:28,401 - Oporavak od greske pri deklaraciji polja unutrasnje klase do ;
+INFO  22:01:28,401 - #3 {
+ERROR 22:01:28,401 - Sintaksna greska na liniji 11
+INFO  22:01:28,401 - #4 }
+INFO  22:01:28,401 - #4 }
+INFO  22:01:28,401 - #11 class
+INFO  22:01:28,401 - #46 B
+INFO  22:01:28,401 - #12 extends
+INFO  22:01:28,401 - #3 {
+INFO  22:01:28,401 - #46 int
+INFO  22:01:28,401 - #46 a
+INFO  22:01:28,401 - #9 [
+INFO  22:01:28,401 - #6 ,
+INFO  22:01:28,401 - #6 ,
+INFO  22:01:28,401 - #46 b
+INFO  22:01:28,401 - #6 ,
+INFO  22:01:28,401 - #46 c
+INFO  22:01:28,402 - #6 ,
+INFO  22:01:28,402 - #3 {
+INFO  22:01:28,402 - #15 void
+INFO  22:01:28,402 - #46 fun
+INFO  22:01:28,402 - #13 (
+INFO  22:01:28,402 - #14 )
+INFO  22:01:28,402 - #3 {
+INFO  22:01:28,402 - #4 }
+INFO  22:01:28,403 - #4 }
+INFO  22:01:28,403 - #4 }
+INFO  22:01:28,403 - #11 class
+INFO  22:01:28,403 - #46 C
+INFO  22:01:28,403 - #12 extends
+INFO  22:01:28,403 - #46 A
+INFO  22:01:28,403 - #6 ,
+INFO  22:01:28,403 - #46 B
+INFO  22:01:28,403 - #3 {
+INFO  22:01:28,403 - #46 bool
+INFO  22:01:28,403 - #46 a
+INFO  22:01:28,404 - #3 {
+INFO  22:01:28,404 - #4 }
+INFO  22:01:28,404 - #4 }
+INFO  22:01:28,404 - #46 A
+INFO  22:01:28,404 - #46 globalA
+INFO  22:01:28,404 - #5 ;
+INFO  22:01:28,404 - #3 {
+ERROR 22:01:28,404 - Oporavak od greske pri deklaraciji polja unutrasnje klase do ;
+INFO  22:01:28,404 - #15 void
+INFO  22:01:28,405 - #46 f
+INFO  22:01:28,406 - #13 (
+INFO  22:01:28,406 - #46 char
+INFO  22:01:28,406 - #46 ch
+INFO  22:01:28,406 - #6 ,
+INFO  22:01:28,407 - #46 int
+INFO  22:01:28,407 - #46 a
+INFO  22:01:28,407 - #6 ,
+INFO  22:01:28,407 - #46 int
+INFO  22:01:28,407 - #46 arg
+INFO  22:01:28,407 - #14 )
+INFO  22:01:28,407 - #46 int
+INFO  22:01:28,408 - #46 x
+INFO  22:01:28,408 - #5 ;
+INFO  22:01:28,408 - #3 {
+INFO  22:01:28,408 - #46 x
+INFO  22:01:28,409 - #7 =
+INFO  22:01:28,409 - #46 arg
+INFO  22:01:28,409 - #5 ;
+INFO  22:01:28,409 - #4 }
+INFO  22:01:28,409 - #15 void
+INFO  22:01:28,411 - #46 main
+INFO  22:01:28,411 - #13 (
+INFO  22:01:28,411 - #14 )
+INFO  22:01:28,411 - #46 int
+INFO  22:01:28,411 - #46 x
+INFO  22:01:28,411 - #6 ,
+INFO  22:01:28,411 - #46 i
+INFO  22:01:28,411 - #5 ;
+INFO  22:01:28,411 - #46 char
+INFO  22:01:28,412 - #46 c
+INFO  22:01:28,412 - #5 ;
+INFO  22:01:28,412 - #3 {
+INFO  22:01:28,412 - #4 }
+INFO  22:01:28,412 - #4 }
+ERROR 22:01:28,412 - Sintaksna greska na liniji 37
+ERROR 22:01:28,412 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 37

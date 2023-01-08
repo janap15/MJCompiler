@@ -1,0 +1,262 @@
+INFO  14:51:00,957 - Compiling source file: C:\Users\Jana\Desktop\SEDMI_SEMESTAR\PP1\Projekat\workspace\MJCompiler\test\testAnalyzer.mj
+INFO  14:51:01,014 - #2 program
+INFO  14:51:01,014 - #46 Program
+INFO  14:51:01,014 - #46 int
+INFO  14:51:01,016 - #46 x
+INFO  14:51:01,016 - #6 ,
+INFO  14:51:01,017 - #46 y
+INFO  14:51:01,017 - #5 ;
+INFO  14:51:01,017 - #46 int
+INFO  14:51:01,018 - #46 arr
+INFO  14:51:01,018 - #9 [
+INFO  14:51:01,018 - #10 ]
+INFO  14:51:01,018 - #5 ;
+INFO  14:51:01,018 - #3 {
+INFO  14:51:01,018 - #46 int
+INFO  14:51:01,019 - #46 k
+INFO  14:51:01,019 - #13 (
+INFO  14:51:01,019 - #46 int
+INFO  14:51:01,020 - #46 a
+INFO  14:51:01,020 - #6 ,
+INFO  14:51:01,020 - #46 int
+INFO  14:51:01,020 - #46 b
+INFO  14:51:01,020 - #14 )
+INFO  14:51:01,021 - #46 int
+INFO  14:51:01,021 - #46 c
+INFO  14:51:01,021 - #5 ;
+INFO  14:51:01,022 - #3 {
+INFO  14:51:01,022 - #21 return
+INFO  14:51:01,023 - #46 c
+INFO  14:51:01,023 - #5 ;
+INFO  14:51:01,024 - #4 }
+INFO  14:51:01,024 - #15 void
+INFO  14:51:01,025 - #46 main
+INFO  14:51:01,026 - #13 (
+INFO  14:51:01,026 - #14 )
+INFO  14:51:01,026 - #3 {
+INFO  14:51:01,026 - #46 k
+INFO  14:51:01,026 - #13 (
+INFO  14:51:01,026 - #46 x
+INFO  14:51:01,026 - #6 ,
+INFO  14:51:01,027 - #46 y
+INFO  14:51:01,027 - #14 )
+INFO  14:51:01,027 - #5 ;
+INFO  14:51:01,027 - #9 [
+INFO  14:51:01,028 - #6 ,
+INFO  14:51:01,028 - #6 ,
+INFO  14:51:01,028 - #10 ]
+INFO  14:51:01,028 - #7 =
+INFO  14:51:01,029 - #46 arr
+INFO  14:51:01,029 - #5 ;
+INFO  14:51:01,029 - #22 read
+INFO  14:51:01,029 - #13 (
+INFO  14:51:01,029 - #46 x
+INFO  14:51:01,029 - #14 )
+INFO  14:51:01,029 - #5 ;
+INFO  14:51:01,029 - #4 }
+INFO  14:51:01,030 - #4 }
+INFO  14:51:01,038 - Program(
+  ProgramName(
+   Program
+  ) [ProgramName]
+  Declarations(
+    Declarations(
+      NoDecl(
+      ) [NoDecl]
+      GlobalVarDeclaration(
+        GlobalVarDecl(
+          Type(
+           int
+          ) [Type]
+          GlobalVarIdentifierList(
+            SingleGlobalVarIdent(
+              GlobalVarIdentOne(
+               x
+              ) [GlobalVarIdentOne]
+            ) [SingleGlobalVarIdent]
+            GlobalVarIdentOne(
+             y
+            ) [GlobalVarIdentOne]
+          ) [GlobalVarIdentifierList]
+        ) [GlobalVarDecl]
+      ) [GlobalVarDeclaration]
+    ) [Declarations]
+    GlobalVarDeclaration(
+      GlobalVarDecl(
+        Type(
+         int
+        ) [Type]
+        SingleGlobalVarIdent(
+          GlobalVarIdentifierArray(
+           arr
+            Brackets(
+            ) [Brackets]
+          ) [GlobalVarIdentifierArray]
+        ) [SingleGlobalVarIdent]
+      ) [GlobalVarDecl]
+    ) [GlobalVarDeclaration]
+  ) [Declarations]
+  MethodDeclarations(
+    MethodDeclarations(
+      NoMethodDecl(
+      ) [NoMethodDecl]
+      MethodDecl(
+        MethodTypeName(
+          RetType(
+            Type(
+             int
+            ) [Type]
+          ) [RetType]
+         k
+        ) [MethodTypeName]
+        ConstructorOrMethod(
+          FormParams(
+            FormalParamDeclarations(
+              FormalParamDeclarationSingle(
+                FormalParamDeclaration(
+                  Type(
+                   int
+                  ) [Type]
+                 a
+                ) [FormalParamDeclaration]
+              ) [FormalParamDeclarationSingle]
+              FormalParamDeclaration(
+                Type(
+                 int
+                ) [Type]
+               b
+              ) [FormalParamDeclaration]
+            ) [FormalParamDeclarations]
+          ) [FormParams]
+          LocalVarDeclarations(
+            NoLocalVarDecl(
+            ) [NoLocalVarDecl]
+            LocalVarDeclaration(
+              Type(
+               int
+              ) [Type]
+              SingleLocalVarIdent(
+                LocalVarIdentifierOne(
+                 c
+                ) [LocalVarIdentifierOne]
+              ) [SingleLocalVarIdent]
+            ) [LocalVarDeclaration]
+          ) [LocalVarDeclarations]
+          Statements(
+            NoStmt(
+            ) [NoStmt]
+            ReturnExpr(
+              ReturnBegin(
+              ) [ReturnBegin]
+              ExprOptionalSingle(
+                ExprTerm(
+                  TermSingle(
+                    FactorSingle(
+                      FactorDesignator(
+                        DesignatorIdent(
+                         c
+                        ) [DesignatorIdent]
+                      ) [FactorDesignator]
+                    ) [FactorSingle]
+                  ) [TermSingle]
+                ) [ExprTerm]
+              ) [ExprOptionalSingle]
+            ) [ReturnExpr]
+          ) [Statements]
+        ) [ConstructorOrMethod]
+      ) [MethodDecl]
+    ) [MethodDeclarations]
+    MethodDecl(
+      MethodTypeName(
+        NoReturn(
+        ) [NoReturn]
+       main
+      ) [MethodTypeName]
+      ConstructorOrMethod(
+        NoFormPars(
+        ) [NoFormPars]
+        NoLocalVarDecl(
+        ) [NoLocalVarDecl]
+        Statements(
+          Statements(
+            Statements(
+              NoStmt(
+              ) [NoStmt]
+              DesignatorStmt(
+                DesignatorOtherStmt(
+                  DesignatorMethodCall(
+                    MethodCall(
+                      DesignatorIdent(
+                       k
+                      ) [DesignatorIdent]
+                      Actuals(
+                        ActualParams(
+                          ActualParam(
+                            ExprTerm(
+                              TermSingle(
+                                FactorSingle(
+                                  FactorDesignator(
+                                    DesignatorIdent(
+                                     x
+                                    ) [DesignatorIdent]
+                                  ) [FactorDesignator]
+                                ) [FactorSingle]
+                              ) [TermSingle]
+                            ) [ExprTerm]
+                          ) [ActualParam]
+                          ExprTerm(
+                            TermSingle(
+                              FactorSingle(
+                                FactorDesignator(
+                                  DesignatorIdent(
+                                   y
+                                  ) [DesignatorIdent]
+                                ) [FactorDesignator]
+                              ) [FactorSingle]
+                            ) [TermSingle]
+                          ) [ExprTerm]
+                        ) [ActualParams]
+                      ) [Actuals]
+                    ) [MethodCall]
+                  ) [DesignatorMethodCall]
+                ) [DesignatorOtherStmt]
+              ) [DesignatorStmt]
+            ) [Statements]
+            DesignatorStmt(
+              DesignatorMultiAssign(
+                DesignMulti(
+                  DesignMultiList(
+                    DesignMultiList(
+                      DesignatorMultiListSingle(
+                        NoDesignatorMulti(
+                        ) [NoDesignatorMulti]
+                      ) [DesignatorMultiListSingle]
+                      NoDesignatorMulti(
+                      ) [NoDesignatorMulti]
+                    ) [DesignMultiList]
+                    NoDesignatorMulti(
+                    ) [NoDesignatorMulti]
+                  ) [DesignMultiList]
+                ) [DesignMulti]
+                DesignatorIdent(
+                 arr
+                ) [DesignatorIdent]
+              ) [DesignatorMultiAssign]
+            ) [DesignatorStmt]
+          ) [Statements]
+          ReadStatement(
+            ReadBegin(
+            ) [ReadBegin]
+            DesignatorIdent(
+             x
+            ) [DesignatorIdent]
+          ) [ReadStatement]
+        ) [Statements]
+      ) [ConstructorOrMethod]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  14:51:01,038 - ===================================
+INFO  14:51:01,042 - Obradjuje se funkcija k na liniji 7
+INFO  14:51:01,042 - Obradjuje se funkcija main na liniji 13
+INFO  14:51:01,042 - Semanticka greska na liniji 16: Designator sa desne strane dodele vrednosti mora biti niz!

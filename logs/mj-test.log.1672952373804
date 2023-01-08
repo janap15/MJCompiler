@@ -1,0 +1,292 @@
+INFO  16:48:06,305 - Compiling source file: C:\Users\Jana\Desktop\SEDMI_SEMESTAR\PP1\Projekat\workspace\MJCompiler\test\testAnalyzer.mj
+INFO  16:48:06,349 - #2 program
+INFO  16:48:06,349 - #46 Program
+INFO  16:48:06,349 - #46 int
+INFO  16:48:06,350 - #46 x
+INFO  16:48:06,350 - #6 ,
+INFO  16:48:06,350 - #46 y
+INFO  16:48:06,350 - #5 ;
+INFO  16:48:06,350 - #46 int
+INFO  16:48:06,351 - #46 x
+INFO  16:48:06,351 - #5 ;
+INFO  16:48:06,351 - #3 {
+INFO  16:48:06,351 - #46 int
+INFO  16:48:06,352 - #46 k
+INFO  16:48:06,352 - #13 (
+INFO  16:48:06,353 - #46 int
+INFO  16:48:06,353 - #46 a
+INFO  16:48:06,353 - #6 ,
+INFO  16:48:06,353 - #46 int
+INFO  16:48:06,353 - #46 b
+INFO  16:48:06,353 - #14 )
+INFO  16:48:06,354 - #46 int
+INFO  16:48:06,354 - #46 c
+INFO  16:48:06,354 - #5 ;
+INFO  16:48:06,355 - #3 {
+INFO  16:48:06,355 - #46 c
+INFO  16:48:06,355 - #7 =
+INFO  16:48:06,356 - #46 a
+INFO  16:48:06,356 - #32 +
+INFO  16:48:06,356 - #46 b
+INFO  16:48:06,357 - #5 ;
+INFO  16:48:06,357 - #21 return
+INFO  16:48:06,357 - #46 c
+INFO  16:48:06,357 - #5 ;
+INFO  16:48:06,358 - #4 }
+INFO  16:48:06,358 - #46 int
+INFO  16:48:06,358 - #46 k
+INFO  16:48:06,359 - #13 (
+INFO  16:48:06,359 - #14 )
+INFO  16:48:06,359 - #3 {
+INFO  16:48:06,359 - #4 }
+INFO  16:48:06,359 - #15 void
+INFO  16:48:06,359 - #46 main
+INFO  16:48:06,360 - #13 (
+INFO  16:48:06,360 - #14 )
+INFO  16:48:06,360 - #3 {
+INFO  16:48:06,360 - #46 k
+INFO  16:48:06,360 - #13 (
+INFO  16:48:06,360 - #46 x
+INFO  16:48:06,360 - #6 ,
+INFO  16:48:06,360 - #46 y
+INFO  16:48:06,360 - #14 )
+INFO  16:48:06,361 - #5 ;
+INFO  16:48:06,361 - #22 read
+INFO  16:48:06,361 - #13 (
+INFO  16:48:06,362 - #46 x
+INFO  16:48:06,362 - #14 )
+INFO  16:48:06,362 - #5 ;
+INFO  16:48:06,362 - #4 }
+INFO  16:48:06,362 - #4 }
+INFO  16:48:06,368 - Program(
+  ProgramName(
+   Program
+  ) [ProgramName]
+  Declarations(
+    Declarations(
+      NoDecl(
+      ) [NoDecl]
+      GlobalVarDeclaration(
+        GlobalVarDecl(
+          Type(
+           int
+          ) [Type]
+          GlobalVarIdentifierList(
+            SingleGlobalVarIdent(
+              GlobalVarIdentOne(
+               x
+              ) [GlobalVarIdentOne]
+            ) [SingleGlobalVarIdent]
+            GlobalVarIdentOne(
+             y
+            ) [GlobalVarIdentOne]
+          ) [GlobalVarIdentifierList]
+        ) [GlobalVarDecl]
+      ) [GlobalVarDeclaration]
+    ) [Declarations]
+    GlobalVarDeclaration(
+      GlobalVarDecl(
+        Type(
+         int
+        ) [Type]
+        SingleGlobalVarIdent(
+          GlobalVarIdentOne(
+           x
+          ) [GlobalVarIdentOne]
+        ) [SingleGlobalVarIdent]
+      ) [GlobalVarDecl]
+    ) [GlobalVarDeclaration]
+  ) [Declarations]
+  MethodDeclarations(
+    MethodDeclarations(
+      MethodDeclarations(
+        NoMethodDecl(
+        ) [NoMethodDecl]
+        MethodDecl(
+          MethodTypeName(
+            RetType(
+              Type(
+               int
+              ) [Type]
+            ) [RetType]
+           k
+          ) [MethodTypeName]
+          ConstructorOrMethod(
+            FormParams(
+              FormalParamDeclarations(
+                FormalParamDeclarationSingle(
+                  FormalParamDeclaration(
+                    Type(
+                     int
+                    ) [Type]
+                   a
+                  ) [FormalParamDeclaration]
+                ) [FormalParamDeclarationSingle]
+                FormalParamDeclaration(
+                  Type(
+                   int
+                  ) [Type]
+                 b
+                ) [FormalParamDeclaration]
+              ) [FormalParamDeclarations]
+            ) [FormParams]
+            LocalVarDeclarations(
+              NoLocalVarDecl(
+              ) [NoLocalVarDecl]
+              LocalVarDeclaration(
+                Type(
+                 int
+                ) [Type]
+                SingleLocalVarIdent(
+                  LocalVarIdentifierOne(
+                   c
+                  ) [LocalVarIdentifierOne]
+                ) [SingleLocalVarIdent]
+              ) [LocalVarDeclaration]
+            ) [LocalVarDeclarations]
+            Statements(
+              Statements(
+                NoStmt(
+                ) [NoStmt]
+                DesignatorStmt(
+                  DesignatorAssignStatement(
+                    DesignatorIdent(
+                     c
+                    ) [DesignatorIdent]
+                    DesignatorAssignment(
+                      AddopTerms(
+                        ExprTerm(
+                          TermSingle(
+                            FactorSingle(
+                              FactorDesignator(
+                                DesignatorIdent(
+                                 a
+                                ) [DesignatorIdent]
+                              ) [FactorDesignator]
+                            ) [FactorSingle]
+                          ) [TermSingle]
+                        ) [ExprTerm]
+                        AddopPlusSign(
+                        ) [AddopPlusSign]
+                        FactorSingle(
+                          FactorDesignator(
+                            DesignatorIdent(
+                             b
+                            ) [DesignatorIdent]
+                          ) [FactorDesignator]
+                        ) [FactorSingle]
+                      ) [AddopTerms]
+                    ) [DesignatorAssignment]
+                  ) [DesignatorAssignStatement]
+                ) [DesignatorStmt]
+              ) [Statements]
+              ReturnExpr(
+                ReturnBegin(
+                ) [ReturnBegin]
+                ExprOptionalSingle(
+                  ExprTerm(
+                    TermSingle(
+                      FactorSingle(
+                        FactorDesignator(
+                          DesignatorIdent(
+                           c
+                          ) [DesignatorIdent]
+                        ) [FactorDesignator]
+                      ) [FactorSingle]
+                    ) [TermSingle]
+                  ) [ExprTerm]
+                ) [ExprOptionalSingle]
+              ) [ReturnExpr]
+            ) [Statements]
+          ) [ConstructorOrMethod]
+        ) [MethodDecl]
+      ) [MethodDeclarations]
+      MethodDecl(
+        MethodTypeName(
+          RetType(
+            Type(
+             int
+            ) [Type]
+          ) [RetType]
+         k
+        ) [MethodTypeName]
+        ConstructorOrMethod(
+          NoFormPars(
+          ) [NoFormPars]
+          NoLocalVarDecl(
+          ) [NoLocalVarDecl]
+          NoStmt(
+          ) [NoStmt]
+        ) [ConstructorOrMethod]
+      ) [MethodDecl]
+    ) [MethodDeclarations]
+    MethodDecl(
+      MethodTypeName(
+        NoReturn(
+        ) [NoReturn]
+       main
+      ) [MethodTypeName]
+      ConstructorOrMethod(
+        NoFormPars(
+        ) [NoFormPars]
+        NoLocalVarDecl(
+        ) [NoLocalVarDecl]
+        Statements(
+          Statements(
+            NoStmt(
+            ) [NoStmt]
+            DesignatorStmt(
+              DesignatorOtherStmt(
+                DesignatorMethodCall(
+                  MethodCall(
+                    DesignatorIdent(
+                     k
+                    ) [DesignatorIdent]
+                    Actuals(
+                      ActualParams(
+                        ActualParam(
+                          ExprTerm(
+                            TermSingle(
+                              FactorSingle(
+                                FactorDesignator(
+                                  DesignatorIdent(
+                                   x
+                                  ) [DesignatorIdent]
+                                ) [FactorDesignator]
+                              ) [FactorSingle]
+                            ) [TermSingle]
+                          ) [ExprTerm]
+                        ) [ActualParam]
+                        ExprTerm(
+                          TermSingle(
+                            FactorSingle(
+                              FactorDesignator(
+                                DesignatorIdent(
+                                 y
+                                ) [DesignatorIdent]
+                              ) [FactorDesignator]
+                            ) [FactorSingle]
+                          ) [TermSingle]
+                        ) [ExprTerm]
+                      ) [ActualParams]
+                    ) [Actuals]
+                  ) [MethodCall]
+                ) [DesignatorMethodCall]
+              ) [DesignatorOtherStmt]
+            ) [DesignatorStmt]
+          ) [Statements]
+          ReadStatement(
+            ReadBegin(
+            ) [ReadBegin]
+            DesignatorIdent(
+             x
+            ) [DesignatorIdent]
+          ) [ReadStatement]
+        ) [Statements]
+      ) [ConstructorOrMethod]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  16:48:06,369 - ===================================
+INFO  16:48:06,373 - Semanticka greska na liniji 4: Simbol x je vec upotrebljen!
+INFO  16:48:06,373 - Obradjuje se funkcija k na liniji 7

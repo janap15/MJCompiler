@@ -1,0 +1,267 @@
+INFO  16:13:00,154 - Compiling source file: C:\Users\Jana\Desktop\SEDMI_SEMESTAR\PP1\Projekat\workspace\MJCompiler\test\testAnalyzer.mj
+INFO  16:13:00,199 - #2 program
+INFO  16:13:00,199 - #46 Program
+INFO  16:13:00,199 - #46 int
+INFO  16:13:00,200 - #46 x
+INFO  16:13:00,200 - #6 ,
+INFO  16:13:00,201 - #46 y
+INFO  16:13:00,201 - #5 ;
+INFO  16:13:00,201 - #46 int
+INFO  16:13:00,202 - #46 arr
+INFO  16:13:00,202 - #9 [
+INFO  16:13:00,202 - #10 ]
+INFO  16:13:00,202 - #5 ;
+INFO  16:13:00,202 - #3 {
+INFO  16:13:00,203 - #46 int
+INFO  16:13:00,203 - #46 k
+INFO  16:13:00,203 - #13 (
+INFO  16:13:00,204 - #46 int
+INFO  16:13:00,204 - #46 a
+INFO  16:13:00,204 - #6 ,
+INFO  16:13:00,204 - #46 int
+INFO  16:13:00,204 - #46 b
+INFO  16:13:00,205 - #14 )
+INFO  16:13:00,205 - #46 int
+INFO  16:13:00,206 - #46 c
+INFO  16:13:00,206 - #5 ;
+INFO  16:13:00,206 - #3 {
+INFO  16:13:00,206 - #21 return
+INFO  16:13:00,207 - #46 c
+INFO  16:13:00,207 - #5 ;
+INFO  16:13:00,208 - #4 }
+INFO  16:13:00,208 - #15 void
+INFO  16:13:00,209 - #46 main
+INFO  16:13:00,209 - #13 (
+INFO  16:13:00,209 - #14 )
+INFO  16:13:00,209 - #3 {
+INFO  16:13:00,209 - #46 k
+INFO  16:13:00,209 - #13 (
+INFO  16:13:00,210 - #46 x
+INFO  16:13:00,210 - #6 ,
+INFO  16:13:00,210 - #46 y
+INFO  16:13:00,210 - #14 )
+INFO  16:13:00,210 - #5 ;
+INFO  16:13:00,211 - #9 [
+INFO  16:13:00,211 - #6 ,
+INFO  16:13:00,211 - #46 x
+INFO  16:13:00,211 - #6 ,
+INFO  16:13:00,211 - #10 ]
+INFO  16:13:00,212 - #7 =
+INFO  16:13:00,212 - #46 arr
+INFO  16:13:00,212 - #5 ;
+INFO  16:13:00,212 - #22 read
+INFO  16:13:00,212 - #13 (
+INFO  16:13:00,212 - #46 x
+INFO  16:13:00,213 - #14 )
+INFO  16:13:00,213 - #5 ;
+INFO  16:13:00,213 - #4 }
+INFO  16:13:00,213 - #4 }
+INFO  16:13:00,220 - Program(
+  ProgramName(
+   Program
+  ) [ProgramName]
+  Declarations(
+    Declarations(
+      NoDecl(
+      ) [NoDecl]
+      GlobalVarDeclaration(
+        GlobalVarDecl(
+          Type(
+           int
+          ) [Type]
+          GlobalVarIdentifierList(
+            SingleGlobalVarIdent(
+              GlobalVarIdentOne(
+               x
+              ) [GlobalVarIdentOne]
+            ) [SingleGlobalVarIdent]
+            GlobalVarIdentOne(
+             y
+            ) [GlobalVarIdentOne]
+          ) [GlobalVarIdentifierList]
+        ) [GlobalVarDecl]
+      ) [GlobalVarDeclaration]
+    ) [Declarations]
+    GlobalVarDeclaration(
+      GlobalVarDecl(
+        Type(
+         int
+        ) [Type]
+        SingleGlobalVarIdent(
+          GlobalVarIdentifierArray(
+           arr
+            Brackets(
+            ) [Brackets]
+          ) [GlobalVarIdentifierArray]
+        ) [SingleGlobalVarIdent]
+      ) [GlobalVarDecl]
+    ) [GlobalVarDeclaration]
+  ) [Declarations]
+  MethodDeclarations(
+    MethodDeclarations(
+      NoMethodDecl(
+      ) [NoMethodDecl]
+      MethodDecl(
+        MethodTypeName(
+          RetType(
+            Type(
+             int
+            ) [Type]
+          ) [RetType]
+         k
+        ) [MethodTypeName]
+        ConstructorOrMethod(
+          FormParams(
+            FormalParamDeclarations(
+              FormalParamDeclarationSingle(
+                FormalParamDeclaration(
+                  Type(
+                   int
+                  ) [Type]
+                 a
+                ) [FormalParamDeclaration]
+              ) [FormalParamDeclarationSingle]
+              FormalParamDeclaration(
+                Type(
+                 int
+                ) [Type]
+               b
+              ) [FormalParamDeclaration]
+            ) [FormalParamDeclarations]
+          ) [FormParams]
+          LocalVarDeclarations(
+            NoLocalVarDecl(
+            ) [NoLocalVarDecl]
+            LocalVarDeclaration(
+              Type(
+               int
+              ) [Type]
+              SingleLocalVarIdent(
+                LocalVarIdentifierOne(
+                 c
+                ) [LocalVarIdentifierOne]
+              ) [SingleLocalVarIdent]
+            ) [LocalVarDeclaration]
+          ) [LocalVarDeclarations]
+          Statements(
+            NoStmt(
+            ) [NoStmt]
+            ReturnExpr(
+              ReturnBegin(
+              ) [ReturnBegin]
+              ExprOptionalSingle(
+                ExprTerm(
+                  TermSingle(
+                    FactorSingle(
+                      FactorDesignator(
+                        DesignatorIdent(
+                         c
+                        ) [DesignatorIdent]
+                      ) [FactorDesignator]
+                    ) [FactorSingle]
+                  ) [TermSingle]
+                ) [ExprTerm]
+              ) [ExprOptionalSingle]
+            ) [ReturnExpr]
+          ) [Statements]
+        ) [ConstructorOrMethod]
+      ) [MethodDecl]
+    ) [MethodDeclarations]
+    MethodDecl(
+      MethodTypeName(
+        NoReturn(
+        ) [NoReturn]
+       main
+      ) [MethodTypeName]
+      ConstructorOrMethod(
+        NoFormPars(
+        ) [NoFormPars]
+        NoLocalVarDecl(
+        ) [NoLocalVarDecl]
+        Statements(
+          Statements(
+            Statements(
+              NoStmt(
+              ) [NoStmt]
+              DesignatorStmt(
+                DesignatorOtherStmt(
+                  DesignatorMethodCall(
+                    MethodCall(
+                      DesignatorIdent(
+                       k
+                      ) [DesignatorIdent]
+                      Actuals(
+                        ActualParams(
+                          ActualParam(
+                            ExprTerm(
+                              TermSingle(
+                                FactorSingle(
+                                  FactorDesignator(
+                                    DesignatorIdent(
+                                     x
+                                    ) [DesignatorIdent]
+                                  ) [FactorDesignator]
+                                ) [FactorSingle]
+                              ) [TermSingle]
+                            ) [ExprTerm]
+                          ) [ActualParam]
+                          ExprTerm(
+                            TermSingle(
+                              FactorSingle(
+                                FactorDesignator(
+                                  DesignatorIdent(
+                                   y
+                                  ) [DesignatorIdent]
+                                ) [FactorDesignator]
+                              ) [FactorSingle]
+                            ) [TermSingle]
+                          ) [ExprTerm]
+                        ) [ActualParams]
+                      ) [Actuals]
+                    ) [MethodCall]
+                  ) [DesignatorMethodCall]
+                ) [DesignatorOtherStmt]
+              ) [DesignatorStmt]
+            ) [Statements]
+            DesignatorStmt(
+              DesignatorMultiAssign(
+                DesignMulti(
+                  DesignMultiList(
+                    DesignMultiList(
+                      DesignatorMultiListSingle(
+                        NoDesignatorMulti(
+                        ) [NoDesignatorMulti]
+                      ) [DesignatorMultiListSingle]
+                      DesignatorMultiSingle(
+                        DesignatorIdent(
+                         x
+                        ) [DesignatorIdent]
+                      ) [DesignatorMultiSingle]
+                    ) [DesignMultiList]
+                    NoDesignatorMulti(
+                    ) [NoDesignatorMulti]
+                  ) [DesignMultiList]
+                ) [DesignMulti]
+                DesignatorIdent(
+                 arr
+                ) [DesignatorIdent]
+              ) [DesignatorMultiAssign]
+            ) [DesignatorStmt]
+          ) [Statements]
+          ReadStatement(
+            ReadBegin(
+            ) [ReadBegin]
+            DesignatorIdent(
+             x
+            ) [DesignatorIdent]
+          ) [ReadStatement]
+        ) [Statements]
+      ) [ConstructorOrMethod]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  16:13:00,220 - ===================================
+INFO  16:13:00,223 - Obradjuje se funkcija k na liniji 7
+INFO  16:13:00,224 - Obradjuje se funkcija main na liniji 13
+INFO  16:13:00,224 -  1 na liniji 16
+INFO  16:13:00,224 -  1 na liniji 16

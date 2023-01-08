@@ -1,0 +1,54 @@
+// test za oporavak - sintaksna analiza B nivo
+
+program Program
+{
+	int getA( b){
+		return a;
+	}
+	
+	void getB(char){
+	}
+	
+	void getC(int []){
+	}
+
+	void main(int , [, ], []) int a, b, c; 
+	{
+		a = b + c;
+		if(){
+			return;
+		}
+		
+		if(a >){
+			return;		
+		}
+		
+		if( < b){
+			return;
+		}
+		
+		if(	|| ){
+			return;
+		}
+		
+		if(a && ){
+			return;
+		}
+		
+		if(a || && b){
+			return;
+		}
+		
+		if(	&& a >= b){
+			return;
+		}
+		
+		if(a <= b ||){
+			return;
+		}
+		
+		if(-a + b &&){
+			return;
+		}
+	}
+}

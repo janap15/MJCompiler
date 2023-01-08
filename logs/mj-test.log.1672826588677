@@ -1,0 +1,14 @@
+INFO  11:00:21,372 - Compiling source file: C:\Users\Jana\Desktop\SEDMI_SEMESTAR\PP1\Projekat\workspace\MJCompiler\test\testAnalyzer.mj
+INFO  11:00:21,416 - #2 program
+INFO  11:00:21,416 - #46 Program
+INFO  11:00:21,416 - #46 int
+INFO  11:00:21,417 - #46 x
+INFO  11:00:21,417 - #6 ,
+INFO  11:00:21,417 - #46 y
+INFO  11:00:21,417 - #5 ;
+INFO  11:00:21,418 - #3 {
+INFO  11:00:21,418 - #46 int
+INFO  11:00:21,418 - #46 k
+INFO  11:00:21,419 - #13 (
+ERROR 11:00:21,419 - Sintaksna greska na liniji 6
+ERROR 11:00:21,419 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 6

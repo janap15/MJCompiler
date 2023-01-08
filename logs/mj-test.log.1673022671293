@@ -1,0 +1,105 @@
+INFO  17:30:38,360 - Compiling source file: C:\Users\Jana\Desktop\SEDMI_SEMESTAR\PP1\Projekat\workspace\MJCompiler\test\testAnalyzer.mj
+INFO  17:30:38,401 - #2 program
+INFO  17:30:38,401 - #46 Program
+INFO  17:30:38,401 - #46 int
+INFO  17:30:38,402 - #46 x
+INFO  17:30:38,402 - #6 ,
+INFO  17:30:38,402 - #46 y
+INFO  17:30:38,402 - #5 ;
+INFO  17:30:38,402 - #3 {
+INFO  17:30:38,403 - #15 void
+INFO  17:30:38,403 - #46 main
+INFO  17:30:38,404 - #13 (
+INFO  17:30:38,404 - #14 )
+INFO  17:30:38,404 - #3 {
+INFO  17:30:38,405 - #46 y
+INFO  17:30:38,405 - #7 =
+INFO  17:30:38,405 - #46 x
+INFO  17:30:38,405 - #32 +
+INFO  17:30:38,406 - #46 x
+INFO  17:30:38,406 - #5 ;
+INFO  17:30:38,407 - #4 }
+INFO  17:30:38,407 - #4 }
+INFO  17:30:38,413 - Program(
+  ProgramName(
+   Program
+  ) [ProgramName]
+  Declarations(
+    NoDecl(
+    ) [NoDecl]
+    GlobalVarDeclaration(
+      GlobalVarDecl(
+        Type(
+         int
+        ) [Type]
+        GlobalVarIdentifierList(
+          SingleGlobalVarIdent(
+            GlobalVarIdentOne(
+             x
+            ) [GlobalVarIdentOne]
+          ) [SingleGlobalVarIdent]
+          GlobalVarIdentOne(
+           y
+          ) [GlobalVarIdentOne]
+        ) [GlobalVarIdentifierList]
+      ) [GlobalVarDecl]
+    ) [GlobalVarDeclaration]
+  ) [Declarations]
+  MethodDeclarations(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethodTypeName(
+        NoReturn(
+        ) [NoReturn]
+       main
+      ) [MethodTypeName]
+      ConstructorOrMethod(
+        NoFormPars(
+        ) [NoFormPars]
+        NoLocalVarDecl(
+        ) [NoLocalVarDecl]
+        Statements(
+          NoStmt(
+          ) [NoStmt]
+          DesignatorStmt(
+            DesignatorAssignStatement(
+              DesignatorIdent(
+               y
+              ) [DesignatorIdent]
+              DesignatorAssignment(
+                AddopTerms(
+                  ExprTerm(
+                    TermSingle(
+                      FactorSingle(
+                        FactorDesignator(
+                          DesignatorIdent(
+                           x
+                          ) [DesignatorIdent]
+                        ) [FactorDesignator]
+                      ) [FactorSingle]
+                    ) [TermSingle]
+                  ) [ExprTerm]
+                  AddopPlusSign(
+                  ) [AddopPlusSign]
+                  FactorSingle(
+                    FactorDesignator(
+                      DesignatorIdent(
+                       x
+                      ) [DesignatorIdent]
+                    ) [FactorDesignator]
+                  ) [FactorSingle]
+                ) [AddopTerms]
+              ) [DesignatorAssignment]
+            ) [DesignatorAssignStatement]
+          ) [DesignatorStmt]
+        ) [Statements]
+      ) [ConstructorOrMethod]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  17:30:38,413 - ===================================
+INFO  17:30:38,416 - Obradjuje se funkcija main na liniji 13
+INFO  17:30:38,416 - ajaad na liniji 18
+INFO  17:30:38,416 -  rs.etf.pp1.symboltable.concepts.Struct@5e9f23b4 na liniji 18
+INFO  17:30:38,416 -  rs.etf.pp1.symboltable.concepts.Struct@5e9f23b4 na liniji 18
