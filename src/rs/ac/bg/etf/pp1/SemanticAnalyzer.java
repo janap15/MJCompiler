@@ -32,6 +32,8 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	private final int classFieldsCnt = 65536;
 	private final String MAIN = "main";
 	
+	private int globVarsCnt = 0;
+	
 	private ArrayList<Struct> multiAssignList = new ArrayList<>();
 	private  Stack<ArrayList<Struct>> funcCallActualParamsStack = new Stack<>();
 	private Map<String, Integer> constructorNum = new HashMap<>();
@@ -52,7 +54,14 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 			msg.append(" na liniji ").append(line);
 		log.info(msg.toString());
 	}
+	
+	public boolean passed() {
+		return !errorDetected;
+	}
 
+	public int getGlobVarsCnt() {
+		return globVarsCnt;
+	}
 	// dst = src
 	private boolean isCompatibleWithAssign(Struct source, Struct destination) {
 		//report_info("src = " + source.getKind() + ", dst =" + destination.getKind(), null);
@@ -83,6 +92,10 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	
 	@Override
 	public void visit(Program program) {
+		globVarsCnt = Tab.currentScope.getnVars();
+		if (globVarsCnt > globalVarsCnt) {
+			report_error("Ne sme se imati vise od " + globalVarsCnt + " promenljivih!", null);
+		}
 		Tab.chainLocalSymbols(program.getProgramName().obj);
 		Tab.closeScope();
 	}
@@ -902,7 +915,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	
 	@Override
 	public void visit(DesignatorMultiBegin DesignatorMultiBegin) {
-		multiAssignList =new ArrayList<>();
+		multiAssignList = new ArrayList<>();
 	}
 	
 	@Override
@@ -1129,7 +1142,5 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		factorMethodCall.struct = factorMethodCall.getMethodCall().struct;
 	}
 	
-	public boolean passed() {
-		return errorDetected;
-	}
+
 }

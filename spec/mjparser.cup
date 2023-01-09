@@ -7,7 +7,7 @@ import rs.ac.bg.etf.pp1.ast.*;
 
 parser code {:
 	
-	boolean errorDetected;
+	boolean errorDetected = false;
 	
 	Logger log = Logger.getLogger(getClass());
    
