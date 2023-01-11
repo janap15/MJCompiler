@@ -107,6 +107,9 @@ nonterminal IfCondition IfCondition;
 nonterminal Then Then;
 nonterminal ElseOptional ElseOptional;
 nonterminal WhileCondition WhileCondition;
+nonterminal AndBegin AndBegin;
+nonterminal OrBegin OrBegin;
+nonterminal ElseBegin ElseBegin;
 nonterminal ActualPars ActualPars;
 nonterminal ActualParamList ActualParamList;
 nonterminal Assignop Assignop;
@@ -331,10 +334,12 @@ ExprOptional ::= (ExprOptionalSingle) Expr:e {: RESULT=new ExprOptionalSingle(e)
 		(NoExpr) {: RESULT=new NoExpr(); :} /* epsilon */
 		;
 
-ElseOptional ::= (ElseStatement) ELSE Statement:S1 {: RESULT=new ElseStatement(S1); RESULT.setLine(S1left); :}
+ElseOptional ::= (ElseStatement) ElseBegin:E1 Statement:S2 {: RESULT=new ElseStatement(E1, S2); RESULT.setLine(E1left); :}
 		|
 		(NoElse) {: RESULT=new NoElse(); :} /* epsilon */
 		;
+		
+ElseBegin ::= (ElseBegin) ELSE {: RESULT=new ElseBegin(); :};
 
 DesignatorStatement ::= (DesignatorAssignStatement) Designator:D1 ASSIGN DesignatorAssign:D2 {: RESULT=new DesignatorAssignStatement(D1, D2); RESULT.setLine(D1left); :} 
 					|
@@ -386,15 +391,19 @@ ActualParamList ::= (ActualParams) ActualParamList:A1 COMMA Expr:E2 {: RESULT=ne
 				(ActualParam) Expr:E1 {: RESULT=new ActualParam(E1); RESULT.setLine(E1left); :}
 				;
 
-Condition ::= (ConditionsOr) Condition:C1 OR CondTerm:C2 {: RESULT=new ConditionsOr(C1, C2); RESULT.setLine(C1left); :}
+Condition ::= (ConditionsOr) Condition:C1 OrBegin:O2 CondTerm:C3 {: RESULT=new ConditionsOr(C1, O2, C3); RESULT.setLine(C1left); :}
 		  |
 		  (CondTerminal) CondTerm:C1 {: RESULT=new CondTerminal(C1); RESULT.setLine(C1left); :}
 		  ;
+		  
+OrBegin ::= (OrBegin) OR {: RESULT=new OrBegin(); :};
 
-CondTerm ::= (CondTermsAnd) CondTerm:C1 AND CondFact:C2 {: RESULT=new CondTermsAnd(C1, C2); RESULT.setLine(C1left); :}
+CondTerm ::= (CondTermsAnd) CondTerm:C1 AndBegin:A2 CondFact:C3 {: RESULT=new CondTermsAnd(C1, A2, C3); RESULT.setLine(C1left); :}
 		 |
 		 (CondF) CondFact:C1 {: RESULT=new CondF(C1); RESULT.setLine(C1left); :}
 		 ; 
+		 
+AndBegin ::= (AndBegin) AND {: RESULT=new AndBegin(); :};
 				
 CondFact ::= (CondFactRelop) Expr:E1 Relop:R2 Expr:E3 {: RESULT=new CondFactRelop(E1, R2, E3); RESULT.setLine(E1left); :}
 		 |

@@ -76,7 +76,7 @@ nonterminal ConstructorBegin, ClassFieldConstrMethodDeclList, MethodOrConstrDecl
 nonterminal ClassFieldDeclList, ClassFieldDecl, ClassFieldIdentList, ClassFieldIdent, ;
 nonterminal FormPars, StatementList, FormalParamList, FormalParamDecl;
 nonterminal Statement, DesignatorStatement, DesignatorMultiBegin, DesignatorOrEpsilon, DesignatorMulti, DesignatorMultiList;
-nonterminal IfCondition, Then, ElseOptional, WhileCondition;
+nonterminal IfCondition, Then, ElseOptional, WhileCondition, AndBegin, OrBegin, ElseBegin;
 nonterminal ActualPars, ActualParamList;
 nonterminal Assignop, Relop, Addop, Mulop, Label;
 nonterminal IfBegin, WhileBegin, ReadBegin, ReturnBegin, PrintBegin, ForeachBegin;
@@ -291,10 +291,12 @@ ExprOptional ::= (ExprOptionalSingle) Expr:e
 		(NoExpr) /* epsilon */
 		;
 
-ElseOptional ::= (ElseStatement) ELSE Statement
+ElseOptional ::= (ElseStatement) ElseBegin Statement
 		|
 		(NoElse) /* epsilon */
 		;
+		
+ElseBegin ::= (ElseBegin) ELSE;
 
 DesignatorStatement ::= (DesignatorAssignStatement) Designator ASSIGN DesignatorAssign 
 					|
@@ -346,15 +348,19 @@ ActualParamList ::= (ActualParams) ActualParamList COMMA Expr
 				(ActualParam) Expr
 				;
 
-Condition ::= (ConditionsOr) Condition OR CondTerm
+Condition ::= (ConditionsOr) Condition OrBegin CondTerm
 		  |
 		  (CondTerminal) CondTerm
 		  ;
+		  
+OrBegin ::= (OrBegin) OR;
 
-CondTerm ::= (CondTermsAnd) CondTerm AND CondFact
+CondTerm ::= (CondTermsAnd) CondTerm AndBegin CondFact
 		 |
 		 (CondF) CondFact
 		 ; 
+		 
+AndBegin ::= (AndBegin) AND;
 				
 CondFact ::= (CondFactRelop) Expr Relop Expr
 		 |
