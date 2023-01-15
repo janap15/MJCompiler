@@ -72,7 +72,7 @@ nonterminal DeclList, MethodDeclList, DeclType, ConstDecl, ClassDecl;
 nonterminal GlobalVarDecl, GlobalVarIdentList, GlobalVarIdent;
 nonterminal LocalVarDecl, LocalVarDeclList, LocalVarIdentList, LocalVarIdent, Brackets;
 nonterminal ConstIdentList, ConstIdent;
-nonterminal ConstructorBegin, ClassFieldConstrMethodDeclList, MethodOrConstrDecl, ExtendsType, MethodOrConstrDeclList, ConstructorOrMethod;
+nonterminal ClassFieldConstrMethodDeclList, MethodOrConstrDecl, ExtendsType, MethodOrConstrDeclList, ConstructorOrMethod;
 nonterminal ClassFieldDeclList, ClassFieldDecl, ClassFieldIdentList, ClassFieldIdent, ;
 nonterminal FormPars, StatementList, FormalParamList, FormalParamDecl;
 nonterminal Statement, DesignatorStatement, DesignatorMultiBegin, DesignatorOrEpsilon, DesignatorMulti, DesignatorMultiList;
@@ -81,7 +81,7 @@ nonterminal ActualPars, ActualParamList;
 nonterminal Assignop, Relop, Addop, Mulop, Label;
 nonterminal IfBegin, WhileBegin, ReadBegin, ReturnBegin, PrintBegin, ForeachBegin;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramName, ConstType, MethodTypeName, MethodDecl, Designator, ClassName, DesignatorArrayLBracket, MethodCallBegin, ConstructorCallBegin;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramName, ConstType, MethodTypeName, MethodDecl, Designator, ClassName, DesignatorArrayLBracket, MethodCallBegin, ConstructorCallBegin, ConstructorBegin;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, ReturnType, Term, Expr, ExprOptional, Condition, Factor, CondTerm, CondFact, SingleTerm;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct DesignatorAssign, DesignatorOther, MethodCall;
 

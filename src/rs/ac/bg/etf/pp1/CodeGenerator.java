@@ -1,20 +1,32 @@
 package rs.ac.bg.etf.pp1;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 import java.util.Stack;
 
+import rs.ac.bg.etf.pp1.ast.ActualParam;
+import rs.ac.bg.etf.pp1.ast.ActualParams;
 import rs.ac.bg.etf.pp1.ast.Addop;
 import rs.ac.bg.etf.pp1.ast.AddopMinusSign;
 import rs.ac.bg.etf.pp1.ast.AddopPlusSign;
 import rs.ac.bg.etf.pp1.ast.AddopTerms;
 import rs.ac.bg.etf.pp1.ast.AndBegin;
 import rs.ac.bg.etf.pp1.ast.BreakStatement;
+import rs.ac.bg.etf.pp1.ast.ClassDecl;
+import rs.ac.bg.etf.pp1.ast.ClassName;
 import rs.ac.bg.etf.pp1.ast.CondFactNoRelop;
 import rs.ac.bg.etf.pp1.ast.CondFactRelop;
+import rs.ac.bg.etf.pp1.ast.ConstructorBegin;
+import rs.ac.bg.etf.pp1.ast.ConstructorCallBegin;
+import rs.ac.bg.etf.pp1.ast.ConstructorDecl;
 import rs.ac.bg.etf.pp1.ast.ContinueStatement;
 import rs.ac.bg.etf.pp1.ast.DesignatorArrayLBracket;
 import rs.ac.bg.etf.pp1.ast.DesignatorAssignStatement;
+import rs.ac.bg.etf.pp1.ast.DesignatorClass;
+import rs.ac.bg.etf.pp1.ast.DesignatorIdent;
 import rs.ac.bg.etf.pp1.ast.DesignatorMethodCall;
 import rs.ac.bg.etf.pp1.ast.DesignatorMultiAssign;
 import rs.ac.bg.etf.pp1.ast.DesignatorMultiBegin;
@@ -32,6 +44,7 @@ import rs.ac.bg.etf.pp1.ast.IfCond;
 import rs.ac.bg.etf.pp1.ast.IfCondition;
 import rs.ac.bg.etf.pp1.ast.IfStatement;
 import rs.ac.bg.etf.pp1.ast.MethodCall;
+import rs.ac.bg.etf.pp1.ast.MethodCallBegin;
 import rs.ac.bg.etf.pp1.ast.MethodDecl;
 import rs.ac.bg.etf.pp1.ast.MethodTypeName;
 import rs.ac.bg.etf.pp1.ast.Mulop;
@@ -66,8 +79,11 @@ import rs.etf.pp1.symboltable.concepts.Struct;
 
 public class CodeGenerator extends VisitorAdaptor {
 
-	private int dataSize = 0;
 	private int mainPC;
+	
+	private enum MethodType {
+		GLOBAL_FUNC, CLASS_METH, CONSTRUCTOR;
+	}
 	
 	private Stack<List<Integer>> inverseCondAdr = new Stack<>();
 	private Stack<List<Integer>> rightCondAdr = new Stack<>();
@@ -79,18 +95,104 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	private ArrayList<Obj> multiAssignList = new ArrayList<>();
 	
-	public int getdataSize() {
-		return dataSize;
-	}
+	private List<Obj> definedClasses = new ArrayList<>();
+	private boolean insideClassDef = false;
+	
+	private  Stack<ArrayList<Struct>> constructorCallActualParamsStack = new Stack<>();
+	
+	private Stack<MethodType> calledMethodsStack = new Stack<>();
 
 	public int getMainPC() {
 		return mainPC;
 	}
-	
-	public void setDataSize(int size) {
-		dataSize = size;
-	}
 
+	private final String joker = "$";
+	private boolean isConstructor(String methodName) {
+		return methodName.startsWith(joker);
+	}
+	
+	private boolean isCompatibleWithAssign(Struct source, Struct destination) {
+		if (source.getKind() != Struct.Class || destination.getKind() != Struct.Class) {
+			return source.assignableTo(destination);
+		}
+		
+		if (source == destination || source == Tab.nullType) return true;
+		
+		Struct parent = source.getElemType();
+		while (parent != null) {
+			if (parent.assignableTo(destination)) {
+				return true;
+			}
+			parent = parent.getElemType();
+		}
+		return false;
+	}
+	
+	public CodeGenerator() {
+		// predefined functions		
+		Obj chrObj = Tab.find("chr");
+		chrObj.setAdr(Code.pc);
+		
+		Code.put(Code.enter);
+		Code.put(1); Code.put(1);
+		// load0
+		Code.put(Code.load_n);
+		Code.put(Code.exit);
+		Code.put(Code.return_);
+		
+		Obj ordObj = Tab.find("ord");
+		ordObj.setAdr(Code.pc);
+		
+		Code.put(Code.enter);
+		Code.put(1); Code.put(1);
+		Code.put(Code.load_n);
+		Code.put(Code.exit);
+		Code.put(Code.return_);
+		
+		Obj lenObj = Tab.find("len");
+		lenObj.setAdr(Code.pc);
+		
+		Code.put(Code.enter);
+		Code.put(1); Code.put(1);
+		Code.put(Code.load_n);
+		Code.put(Code.arraylength);
+		Code.put(Code.exit);
+		Code.put(Code.return_);
+	}
+	
+	private void createVirtualFunctionsTable() {
+		for(Obj definedClassObj : definedClasses) {
+			definedClassObj.setAdr(Code.dataSize);
+			Collection<Obj> classMembers = definedClassObj.getType().getMembers();
+			Iterator<Obj> iter = classMembers.iterator();
+			
+			while (iter.hasNext()) {
+				Obj obj = iter.next();
+				if (obj.getKind() != Obj.Meth) continue; // skip fields
+				
+				// method name chars
+				for (char c : obj.getName().toCharArray()) {
+					Code.loadConst(c);
+					Code.put(Code.putstatic);
+					Code.put2(Code.dataSize++);
+				}
+				// -1 last char
+				Code.loadConst(-1);
+				Code.put(Code.putstatic);
+				Code.put2(Code.dataSize++);
+			
+				// method address
+				Code.loadConst(obj.getAdr());
+				Code.put(Code.putstatic);
+				Code.put2(Code.dataSize++);
+			}
+			// -2 end of vft
+			Code.loadConst(-2);
+			Code.put(Code.putstatic);
+			Code.put2(Code.dataSize++);
+		}
+	}
+	
 	@Override
 	public void visit(MethodDecl methodDecl) {
 		Obj methObj = methodDecl.getMethodTypeName().obj;
@@ -104,17 +206,25 @@ public class CodeGenerator extends VisitorAdaptor {
 		}	
 	}
 	
+	
+	@Override
+	public void visit(ConstructorDecl constructorDecl) {
+		Code.put(Code.exit);
+		Code.put(Code.return_);
+	}
+
 	@Override
 	public void visit(MethodTypeName methodTypeName) {
 		if ("main".equals(methodTypeName.getMethodName())) {
 			mainPC = Code.pc;
-			// TODO vft
+			createVirtualFunctionsTable();
 		}
 		Obj methodObj = methodTypeName.obj;
 		methodObj.setAdr(Code.pc);
 		
 		// generate entry
 		Code.put(Code.enter);
+		System.err.println("size " + methodObj.getLocalSymbols().size());
 		Code.put(methodObj.getLevel());  // params cnt
 		Code.put(methodObj.getLocalSymbols().size());  // params and locals
 	}
@@ -207,14 +317,91 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	@Override
-	public void visit(MethodCall methodCall) {
-		Obj methodObj = methodCall.getMethodCallBegin().obj;
-		// TODO klase
-		int offset = methodObj.getAdr() - Code.pc;
-		Code.put(Code.call);
-		Code.put2(offset);
+	public void visit(MethodCallBegin methodCallBegin) {
+		Obj methodObj = methodCallBegin.getDesignator().obj;
+		boolean isClassMeth = false;
+		
+		Collection<Obj> fileds = methodObj.getLocalSymbols();
+		for (Obj field : fileds) {
+			if ("this".equals(field.getName())) {
+				isClassMeth = true;
+				break;
+			}
+		}
+		System.err.println("call begin" + isClassMeth);
+		if (isClassMeth) {
+			System.err.println("abraka" + methodObj.getName());
+			calledMethodsStack.push(MethodType.CLASS_METH);
+			Code.put(Code.dup);   // this
+		}
+		else {
+			System.err.println("svraka" + methodObj.getName());
+			calledMethodsStack.push(MethodType.GLOBAL_FUNC);
+		}
+		System.err.println(calledMethodsStack.size());
+		
 	}
 	
+	@Override
+	public void visit(MethodCall methodCall) {
+		System.err.println("call " +calledMethodsStack.size());
+		calledMethodsStack.pop();
+		
+		Obj methodObj = methodCall.getMethodCallBegin().obj;
+		boolean isClassMeth = false;
+		
+		Collection<Obj> fileds = methodObj.getLocalSymbols();
+		for (Obj field : fileds) {
+			if ("this".equals(field.getName())) {
+				isClassMeth = true;
+				break;
+			}
+		}
+		
+		if (!isClassMeth) {
+			System.err.println("kukuu" + methodObj.getName());
+			int offset = methodObj.getAdr() - Code.pc;
+			Code.put(Code.call);
+			Code.put2(offset);
+		}
+		else {
+			// class method has to be invoken virtually
+			Code.put(Code.getfield);
+			Code.put2(0);				// first fields i vftp
+			
+			Code.put(Code.invokevirtual);
+			for (char c : methodObj.getName().toCharArray()) 
+				Code.put4(c);
+			Code.put4(-1);
+		}
+	}
+	
+	@Override
+	public void visit(ActualParam actualParam) {
+		System.err.println("actual param " + calledMethodsStack.size());
+		if (calledMethodsStack.peek() == MethodType.CLASS_METH) {
+			Code.put(Code.dup_x1);
+			Code.put(Code.pop);     // swapuje zbog this
+		}
+		
+		if (calledMethodsStack.peek() == MethodType.CONSTRUCTOR) {
+			constructorCallActualParamsStack.peek().add(actualParam.getExpr().struct);
+		}
+			
+	}
+	
+	@Override
+	public void visit(ActualParams actualParams) {
+		System.err.println("actual params " + calledMethodsStack.size());
+		if (calledMethodsStack.peek() == MethodType.CLASS_METH) {
+			Code.put(Code.dup_x1);
+			Code.put(Code.pop);     // swapuje zbog this
+		}
+		
+		if (calledMethodsStack.peek() == MethodType.CONSTRUCTOR) {
+			constructorCallActualParamsStack.peek().add(actualParams.getExpr().struct);
+		}
+	}
 	
 	@Override
 	public void visit(AddopTerms addopTerms) {
@@ -270,8 +457,134 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	@Override
+	public void visit(ConstructorBegin constructorBegin) {
+		System.err.println("obj " + constructorBegin.obj.getName());
+		Obj methodObj = constructorBegin.obj;
+		methodObj.setAdr(Code.pc);
+		
+		// generate entry
+		Code.put(Code.enter);
+		System.err.println("size " + methodObj.getLevel());
+		Code.put(methodObj.getLevel());  // params cnt
+		Code.put(methodObj.getLocalSymbols().size());  // params and locals
+	}
+	
+	@Override
+	public void visit(ConstructorCallBegin constructorCallBegin) {
+		calledMethodsStack.push(MethodType.CONSTRUCTOR);
+		constructorCallActualParamsStack.add(new ArrayList<>());
+		
+		Struct classType = ((FactorNewConstructor)(constructorCallBegin.getParent())).getType().struct;
+		
+		Code.put(Code.new_);
+		Code.put2(classType.getNumberOfFields() * 4);   //jedna rec
+		
+		int adrVirtualFUnctionsTable = 0;
+		
+		Iterator<Obj> iter = definedClasses.iterator();
+		while(iter.hasNext()) {
+			Obj classObj = iter.next();
+			
+			if (classType == classObj.getType()) {
+				adrVirtualFUnctionsTable = classObj.getAdr();
+				System.out.println("vtf = " + classObj.getAdr());
+				break;
+			}
+		}
+		
+		Code.put(Code.dup);
+		Code.loadConst(adrVirtualFUnctionsTable);
+		Code.put(Code.putfield);
+		Code.put2(0);
+		Code.put(Code.dup);
+	}
+	
+	
+	@Override
 	public void visit(FactorNewConstructor factorNewConstructor) {
-		// TODO
+		calledMethodsStack.pop();
+		Struct classType = factorNewConstructor.getType().struct;
+		ArrayList<Struct> actualPars = constructorCallActualParamsStack.pop();
+
+		System.err.println("\nsuze" + actualPars.size());
+		Iterator<Obj> iter = definedClasses.iterator();
+		Obj classObj = null;
+		while(iter.hasNext()) {
+			classObj = iter.next();
+			if (classType == classObj.getType()) {
+				break;
+			}
+		}
+		
+		Obj constructor = null;
+		boolean found = false;
+		
+		if (classObj != null) {
+			System.err.println(classObj.getName());
+			Collection<Obj> fileds = classObj.getType().getMembers();
+			System.err.println(fileds.size());
+			for (Obj constr : fileds) {
+				System.err.println("prc" + constr.getName());
+				if (isConstructor(constr.getName())) {
+					
+					Collection<Obj> formalParams = constr.getLocalSymbols();
+					
+					Iterator<Struct> actIter = actualPars.iterator();
+					Iterator<Obj> formalIter = formalParams.iterator();
+					Iterator<Obj> thisIter = formalParams.iterator();
+					
+					int formalParamsCount = constr.getLevel();
+					Obj formalObj;
+					
+					if (formalParamsCount > 0) {
+						formalObj = thisIter.next();
+						if (formalObj.getName().equals("this") && formalObj.getType().getKind() == Struct.Class) {
+							formalIter.next();
+							formalParamsCount--;
+						}
+					}
+					while (formalParamsCount > 0 && actIter.hasNext()) {
+						formalObj = formalIter.next();
+						Struct formalParamStruct = formalObj.getType();
+						Struct actParamStruct = actIter.next();
+						if (!isCompatibleWithAssign(formalParamStruct, actParamStruct)) {
+							break;
+						}
+						formalParamsCount--;
+						
+					}	
+					
+					if (!actIter.hasNext() && formalParamsCount == 0) {
+						found = true;
+					}
+					
+				}
+				if (found) {
+					constructor = constr;
+					break;
+				}
+			}
+		}
+		
+		if (found == true) {
+			System.err.println("uslouuuuuuuuuuu");
+//			// class method has to be invoken virtually
+//			Code.put(Code.getfield);
+//			Code.put2(0);				// first fields i vftp
+//			
+//			Code.put(Code.invokevirtual);
+//			System.err.println("kurac " + constructor.getName());
+//			for (char c : constructor.getName().toCharArray()) 
+//				Code.put4(c);
+//			Code.put4(-1);
+			int offset = constructor.getAdr() - Code.pc;
+			Code.put(Code.call);
+			Code.put2(offset);
+		}
+		else {
+			Code.put(Code.pop);
+		}
+		
 	}
 	
 	@Override
@@ -297,7 +610,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	@Override
 	public void visit(DesignatorMultiAssign designatorMultiAssign) {
 		Obj designatorObj = designatorMultiAssign.getDesignator().obj;
-		// TODO arraylength
+		// obilazak sa desna na levo
 		for (int i = multiAssignList.size() - 1; i >= 0; i--) {
 			Obj multiDst = multiAssignList.get(i);
 			if (multiDst != null) {
@@ -312,6 +625,27 @@ public class CodeGenerator extends VisitorAdaptor {
 		}
 		
 		multiAssignList.clear();
+	}
+	
+	@Override
+	public void visit(DesignatorClass designatorClass) {
+		Code.load(designatorClass.getDesignator().obj);
+	}
+	
+	@Override
+	public void visit(DesignatorIdent designatorIdent) {
+		Obj currentClass = null;
+		if (definedClasses.size() > 0)
+			currentClass = definedClasses.get(definedClasses.size()-1);
+		
+		if (designatorIdent.obj.getKind() == Obj.Fld)
+			Code.put(Code.load_n);		// this
+		else {
+			if (designatorIdent.obj.getKind() == Obj.Meth && insideClassDef && 
+					currentClass.getType().getMembersTable().searchKey(designatorIdent.obj.getName()) != null) {
+				Code.put(Code.load_n);
+			}
+		}
 	}
 	
 	@Override
@@ -485,6 +819,30 @@ public class CodeGenerator extends VisitorAdaptor {
 		Code.putJump(whileAdr.peek());
 	}
 	
+	@Override
+	public void visit(ClassName className) {
+		insideClassDef = true;
+		Obj classObj = className.obj;
+		definedClasses.add(classObj);
+		
+		Struct parent = classObj.getType().getElemType();
+		if (parent != null) {
+			Collection<Obj> classMembers = classObj.getType().getMembers();
+			Iterator<Obj> iter = classMembers.iterator();
+			
+			while (iter.hasNext()) {
+				Obj classMember = iter.next();
+				// postavljanje adresa iz natklase
+				if (classMember.getKind() == Obj.Meth && parent.getMembersTable().searchKey(classMember.getName()) != null)
+						classMember.setAdr(parent.getMembersTable().searchKey(classMember.getName()).getAdr());
+			}
+		}
+	}
+	
+	@Override
+	public void visit(ClassDecl classDecl) {
+		insideClassDef = false;
+	}
 	
 }
 	

@@ -30,6 +30,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	private final int localVarsCnt = 256;
 	private final int globalVarsCnt = 65536;
 	private final int classFieldsCnt = 65536;
+	private final String joker = "$";
 	private final String MAIN = "main";
 	
 	private int globVarsCnt = 0;
@@ -58,6 +59,10 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	public boolean passed() {
 		return !errorDetected;
 	}
+	
+	private boolean isConstructor(String methodName) {
+		return methodName.startsWith(joker);
+	}
 
 	public int getGlobVarsCnt() {
 		return globVarsCnt;
@@ -69,7 +74,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 			return source.assignableTo(destination);
 		}
 		
-		if (source.assignableTo(destination)) return true;
+		if (source == destination || source == Tab.nullType) return true;
 		
 		Struct parent = source.getElemType();
 		//report_info("parent " + parent.toString(), null);
@@ -311,7 +316,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 			while (iterMeth.hasNext()) {
 				
 				Obj member = iterMeth.next();
-				if (member.getKind() == Obj.Meth && Tab.currentScope().findSymbol(member.getName()) == null) {
+				if (member.getKind() == Obj.Meth && Tab.currentScope().findSymbol(member.getName()) == null && !isConstructor(member.getName())) {
 					
 					Tab.openScope();
 					Obj thisObjNode = Tab.insert(Obj.Var, "this", currentClass);
@@ -337,9 +342,9 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		}
 		
 		Tab.chainLocalSymbols(currentClass);
-		//report_info("curr = " +currentClass.getKind(), null);
+	
 		Tab.closeScope();
-		
+		//report_info("curr = " + currentClass.getMembersTable(), null);
 		//Tab.dump();
 		if (currentClass.getNumberOfFields() > classFieldsCnt) report_error("Ne sme se koristiti vise od " + classFieldsCnt + " polja!", null);
 		
@@ -447,9 +452,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		
 		if (formalParamsCount > 0) {
 			formalObj = thisIter.next();
-			//report_info("name = " + formalObj.getName(), null);
 			if (formalObj.getName().equals("this") && formalObj.getType().getKind() == Struct.Class) {
-				//report_info("this", null);
 				formalIter.next();
 				formalParamsCount--;
 			}
@@ -458,9 +461,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 			formalObj = formalIter.next();
 			Struct formalParamStruct = formalObj.getType();
 			Struct actParamStruct = actIter.next();
-			//report_info("name = " + formalObj.getName() + " formal = " + formalParamStruct.getKind() + " act = " + actParamStruct.getKind(), null);
 			if (!isCompatibleWithAssign(formalParamStruct, actParamStruct)) {
-				//report_info("name = " + formalObj.getName() + "formal = " + formalParamStruct.getKind() + " act = " + actParamStruct.getKind(), null);
 				report_error("Stvarni parametri poziva funkcije ne odgovaraju parametrima formalnih argumenata funkcije!", methodCall);
 				return;
 			}
@@ -479,9 +480,9 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	@Override
 	public void visit(ConstructorBegin constructorBegin) {
 		if (constructorBegin.getName().equals(currentClassName)) {
-			String constructorName = currentClassName + "$" + ++currentClassConstr;
+			String constructorName = joker + currentClassName + ++currentClassConstr;
 			//report_info("begin" + constructorName, null);
-			currentMethod = new Obj(Obj.Meth, constructorName, Tab.noType);
+			constructorBegin.obj = currentMethod = Tab.insert(Obj.Meth, constructorName, Tab.noType);
 			Tab.openScope();
 			Obj thisObjNode = Tab.insert(Obj.Var, "this", currentClass);
 			thisObjNode.setFpPos(1);
@@ -497,7 +498,8 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		Tab.chainLocalSymbols(currentMethod);
 		//report_info("konstruktor " + currentMethod.getName(), null);
 		Tab.closeScope();
-		Tab.currentScope.addToLocals(currentMethod);
+		report_info("konstruktor " + currentMethod.getName() + currentMethod.getLevel(), null);
+
 		returnFound = false;
 		currentMethod = null;
 	}
@@ -596,7 +598,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 							}
 						}
 						else { 
-							if (!isCompatibleWithAssign(baseIter.next().getType(), overridenIter.next().getType())) {
+							if (!isCompatibleWithAssign(baseObj.getType(), overridenObj.getType())) {
 								hasError = true;
 								break;
 							}
@@ -1080,13 +1082,13 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		Obj classObj = Tab.find(className);
 		//report_info(classObj.getName(), null);
 		for (int i = 1; i <= constructorCnt; i++) {
-			String constructorName = className + "$" + i;
+			String constructorName = joker + className + i;
 			Obj constructor = classObj.getType().getMembersTable().searchKey(constructorName);
-//			Collection<Obj> tabela = classObj.getType().getMembersTable().symbols();
-//			for (Obj obj : tabela) {
-//				report_info(obj.getName(), null);
-//			}
-//			report_info(constructor.getName(), null);
+			Collection<Obj> tabela = classObj.getType().getMembersTable().symbols();
+			for (Obj obj : tabela) {
+				System.out.println(obj.getName());
+			}
+			report_info(constructor.getName(), null);
 			Collection<Obj> formalParams = constructor.getLocalSymbols();
 			
 			Iterator<Obj> formalIter = formalParams.iterator();

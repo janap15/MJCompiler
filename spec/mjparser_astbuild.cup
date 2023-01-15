@@ -83,7 +83,6 @@ nonterminal LocalVarIdent LocalVarIdent;
 nonterminal Brackets Brackets;
 nonterminal ConstIdentList ConstIdentList;
 nonterminal ConstIdent ConstIdent;
-nonterminal ConstructorBegin ConstructorBegin;
 nonterminal ClassFieldConstrMethodDeclList ClassFieldConstrMethodDeclList;
 nonterminal MethodOrConstrDecl MethodOrConstrDecl;
 nonterminal ExtendsType ExtendsType;
@@ -124,7 +123,7 @@ nonterminal ReturnBegin ReturnBegin;
 nonterminal PrintBegin PrintBegin;
 nonterminal ForeachBegin ForeachBegin;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramName, ConstType, MethodTypeName, MethodDecl, Designator, ClassName, DesignatorArrayLBracket, MethodCallBegin, ConstructorCallBegin;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramName, ConstType, MethodTypeName, MethodDecl, Designator, ClassName, DesignatorArrayLBracket, MethodCallBegin, ConstructorCallBegin, ConstructorBegin;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, ReturnType, Term, Expr, ExprOptional, Condition, Factor, CondTerm, CondFact, SingleTerm;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct DesignatorAssign, DesignatorOther, MethodCall;
 

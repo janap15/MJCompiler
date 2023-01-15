@@ -57,12 +57,15 @@ public class MJParserTest {
 			if (!p.errorDetected && analyzer.passed()) {
 				System.out.println("Parsiranje uspesno zavrseno!");
 				CodeGenerator codeGenerator = new CodeGenerator();
-				codeGenerator.setDataSize(analyzer.getGlobVarsCnt());
+				//codeGenerator.setDataSize(analyzer.getGlobVarsCnt());
+				Code.dataSize = analyzer.getGlobVarsCnt();
+				System.err.println(analyzer.getGlobVarsCnt());
 				File objFile = new File("test/testCode.obj");
 				if (objFile.exists()) objFile.delete();
 				
 				prog.traverseBottomUp(codeGenerator);
-				Code.dataSize = codeGenerator.getdataSize();
+				//Code.dataSize = codeGenerator.getdataSize();
+				System.err.println("datamsize" + Code.dataSize);
 				Code.mainPc = codeGenerator.getMainPC();
 				Code.write(new FileOutputStream(objFile));
 				log.info("Parsiranje uspesno izvrseno!");
