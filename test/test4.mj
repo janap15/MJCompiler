@@ -1,0 +1,40 @@
+program test4
+
+class X{
+	{
+		void fun(){
+			print('X');
+			print('F');
+			print(eol);
+		}
+	}
+}
+
+class Y extends X{
+	{
+	void fun(){
+			print('Y');
+			print('F');
+			print(eol);
+		}
+	}
+}
+
+{
+	void fun(X x){
+		print('G');
+		print('F');
+		print(eol);
+	}
+	
+	
+	void main() X x; {
+		x = new X();
+		x.fun();
+		fun(x);
+		
+		x = new Y();
+		x.fun();
+		fun(x);
+	}
+}

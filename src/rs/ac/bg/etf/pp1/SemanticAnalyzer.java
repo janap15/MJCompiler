@@ -93,6 +93,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	public void visit(ProgramName progName) {
 		progName.obj = Tab.insert(Obj.Prog, progName.getProgName(), Tab.noType);
 		Tab.openScope();
+//		Tab.insert(Obj.Var, "_x", Tab.intType); // pomocna promenljiva
 	}
 	
 	@Override

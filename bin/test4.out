@@ -1,0 +1,614 @@
+INFO  20:53:24,011 - Compiling source file: C:\Users\Jana\Desktop\SEDMI_SEMESTAR\PP1\Projekat\workspace\MJCompiler\test\test4.mj
+INFO  20:53:24,084 - #2 program
+INFO  20:53:24,084 - #46 test4
+INFO  20:53:24,084 - #11 class
+INFO  20:53:24,085 - #46 X
+INFO  20:53:24,085 - #3 {
+INFO  20:53:24,086 - #3 {
+INFO  20:53:24,087 - #15 void
+INFO  20:53:24,088 - #46 fun
+INFO  20:53:24,089 - #13 (
+INFO  20:53:24,089 - #14 )
+INFO  20:53:24,089 - #3 {
+INFO  20:53:24,090 - #23 print
+INFO  20:53:24,091 - #13 (
+INFO  20:53:24,091 - #48 X
+INFO  20:53:24,091 - #14 )
+INFO  20:53:24,092 - #5 ;
+INFO  20:53:24,092 - #23 print
+INFO  20:53:24,092 - #13 (
+INFO  20:53:24,093 - #48 F
+INFO  20:53:24,093 - #14 )
+INFO  20:53:24,093 - #5 ;
+INFO  20:53:24,101 - #23 print
+INFO  20:53:24,101 - #13 (
+INFO  20:53:24,101 - #46 eol
+INFO  20:53:24,101 - #14 )
+INFO  20:53:24,101 - #5 ;
+INFO  20:53:24,101 - #4 }
+INFO  20:53:24,101 - #4 }
+INFO  20:53:24,103 - #4 }
+INFO  20:53:24,103 - #11 class
+INFO  20:53:24,104 - #46 Y
+INFO  20:53:24,104 - #12 extends
+INFO  20:53:24,104 - #46 X
+INFO  20:53:24,104 - #3 {
+INFO  20:53:24,105 - #3 {
+INFO  20:53:24,105 - #15 void
+INFO  20:53:24,105 - #46 fun
+INFO  20:53:24,105 - #13 (
+INFO  20:53:24,105 - #14 )
+INFO  20:53:24,105 - #3 {
+INFO  20:53:24,105 - #23 print
+INFO  20:53:24,105 - #13 (
+INFO  20:53:24,105 - #48 Y
+INFO  20:53:24,106 - #14 )
+INFO  20:53:24,106 - #5 ;
+INFO  20:53:24,106 - #23 print
+INFO  20:53:24,106 - #13 (
+INFO  20:53:24,106 - #48 F
+INFO  20:53:24,106 - #14 )
+INFO  20:53:24,106 - #5 ;
+INFO  20:53:24,106 - #23 print
+INFO  20:53:24,106 - #13 (
+INFO  20:53:24,106 - #46 eol
+INFO  20:53:24,106 - #14 )
+INFO  20:53:24,106 - #5 ;
+INFO  20:53:24,106 - #4 }
+INFO  20:53:24,106 - #4 }
+INFO  20:53:24,106 - #4 }
+INFO  20:53:24,106 - #3 {
+INFO  20:53:24,106 - #15 void
+INFO  20:53:24,107 - #46 fun
+INFO  20:53:24,107 - #13 (
+INFO  20:53:24,107 - #46 X
+INFO  20:53:24,107 - #46 x
+INFO  20:53:24,108 - #14 )
+INFO  20:53:24,108 - #3 {
+INFO  20:53:24,108 - #23 print
+INFO  20:53:24,108 - #13 (
+INFO  20:53:24,108 - #48 G
+INFO  20:53:24,108 - #14 )
+INFO  20:53:24,108 - #5 ;
+INFO  20:53:24,108 - #23 print
+INFO  20:53:24,108 - #13 (
+INFO  20:53:24,108 - #48 F
+INFO  20:53:24,108 - #14 )
+INFO  20:53:24,108 - #5 ;
+INFO  20:53:24,108 - #23 print
+INFO  20:53:24,108 - #13 (
+INFO  20:53:24,109 - #46 eol
+INFO  20:53:24,109 - #14 )
+INFO  20:53:24,109 - #5 ;
+INFO  20:53:24,109 - #4 }
+INFO  20:53:24,109 - #15 void
+INFO  20:53:24,109 - #46 main
+INFO  20:53:24,109 - #13 (
+INFO  20:53:24,109 - #14 )
+INFO  20:53:24,109 - #46 X
+INFO  20:53:24,109 - #46 x
+INFO  20:53:24,109 - #5 ;
+INFO  20:53:24,109 - #3 {
+INFO  20:53:24,111 - #46 x
+INFO  20:53:24,111 - #7 =
+INFO  20:53:24,111 - #27 new
+INFO  20:53:24,111 - #46 X
+INFO  20:53:24,111 - #13 (
+INFO  20:53:24,111 - #14 )
+INFO  20:53:24,112 - #5 ;
+INFO  20:53:24,113 - #46 x
+INFO  20:53:24,113 - #24 .
+INFO  20:53:24,113 - #46 fun
+INFO  20:53:24,113 - #13 (
+INFO  20:53:24,113 - #14 )
+INFO  20:53:24,114 - #5 ;
+INFO  20:53:24,115 - #46 fun
+INFO  20:53:24,115 - #13 (
+INFO  20:53:24,115 - #46 x
+INFO  20:53:24,115 - #14 )
+INFO  20:53:24,116 - #5 ;
+INFO  20:53:24,116 - #46 x
+INFO  20:53:24,116 - #7 =
+INFO  20:53:24,116 - #27 new
+INFO  20:53:24,116 - #46 Y
+INFO  20:53:24,116 - #13 (
+INFO  20:53:24,116 - #14 )
+INFO  20:53:24,116 - #5 ;
+INFO  20:53:24,116 - #46 x
+INFO  20:53:24,116 - #24 .
+INFO  20:53:24,116 - #46 fun
+INFO  20:53:24,116 - #13 (
+INFO  20:53:24,116 - #14 )
+INFO  20:53:24,116 - #5 ;
+INFO  20:53:24,116 - #46 fun
+INFO  20:53:24,116 - #13 (
+INFO  20:53:24,116 - #46 x
+INFO  20:53:24,116 - #14 )
+INFO  20:53:24,117 - #5 ;
+INFO  20:53:24,117 - #4 }
+INFO  20:53:24,117 - #4 }
+INFO  20:53:24,128 - Program(
+  ProgramName(
+   test4
+  ) [ProgramName]
+  Declarations(
+    Declarations(
+      NoDecl(
+      ) [NoDecl]
+      ClassDeclaration(
+        ClassDecl(
+          ClassName(
+           X
+          ) [ClassName]
+          NoExtends(
+          ) [NoExtends]
+          ClassFiledConstrMethodDeclarations(
+            NoClassFieldDecl(
+            ) [NoClassFieldDecl]
+            ConsturctorDeclarations(
+              NoConstructor(
+              ) [NoConstructor]
+              ClassMethodDecl(
+                MethodDecl(
+                  MethodTypeName(
+                    NoReturn(
+                    ) [NoReturn]
+                   fun
+                  ) [MethodTypeName]
+                  ConstructorOrMethod(
+                    NoFormPars(
+                    ) [NoFormPars]
+                    NoLocalVarDecl(
+                    ) [NoLocalVarDecl]
+                    Statements(
+                      Statements(
+                        Statements(
+                          NoStmt(
+                          ) [NoStmt]
+                          PrintExpr(
+                            PrintBegin(
+                            ) [PrintBegin]
+                            ExprTerm(
+                              TermSingle(
+                                FactorSingle(
+                                  FactorConst(
+                                    CharConst(
+                                     X
+                                    ) [CharConst]
+                                  ) [FactorConst]
+                                ) [FactorSingle]
+                              ) [TermSingle]
+                            ) [ExprTerm]
+                          ) [PrintExpr]
+                        ) [Statements]
+                        PrintExpr(
+                          PrintBegin(
+                          ) [PrintBegin]
+                          ExprTerm(
+                            TermSingle(
+                              FactorSingle(
+                                FactorConst(
+                                  CharConst(
+                                   F
+                                  ) [CharConst]
+                                ) [FactorConst]
+                              ) [FactorSingle]
+                            ) [TermSingle]
+                          ) [ExprTerm]
+                        ) [PrintExpr]
+                      ) [Statements]
+                      PrintExpr(
+                        PrintBegin(
+                        ) [PrintBegin]
+                        ExprTerm(
+                          TermSingle(
+                            FactorSingle(
+                              FactorDesignator(
+                                DesignatorIdent(
+                                 eol
+                                ) [DesignatorIdent]
+                              ) [FactorDesignator]
+                            ) [FactorSingle]
+                          ) [TermSingle]
+                        ) [ExprTerm]
+                      ) [PrintExpr]
+                    ) [Statements]
+                  ) [ConstructorOrMethod]
+                ) [MethodDecl]
+              ) [ClassMethodDecl]
+            ) [ConsturctorDeclarations]
+          ) [ClassFiledConstrMethodDeclarations]
+        ) [ClassDecl]
+      ) [ClassDeclaration]
+    ) [Declarations]
+    ClassDeclaration(
+      ClassDecl(
+        ClassName(
+         Y
+        ) [ClassName]
+        TypeExtends(
+          Type(
+           X
+          ) [Type]
+        ) [TypeExtends]
+        ClassFiledConstrMethodDeclarations(
+          NoClassFieldDecl(
+          ) [NoClassFieldDecl]
+          ConsturctorDeclarations(
+            NoConstructor(
+            ) [NoConstructor]
+            ClassMethodDecl(
+              MethodDecl(
+                MethodTypeName(
+                  NoReturn(
+                  ) [NoReturn]
+                 fun
+                ) [MethodTypeName]
+                ConstructorOrMethod(
+                  NoFormPars(
+                  ) [NoFormPars]
+                  NoLocalVarDecl(
+                  ) [NoLocalVarDecl]
+                  Statements(
+                    Statements(
+                      Statements(
+                        NoStmt(
+                        ) [NoStmt]
+                        PrintExpr(
+                          PrintBegin(
+                          ) [PrintBegin]
+                          ExprTerm(
+                            TermSingle(
+                              FactorSingle(
+                                FactorConst(
+                                  CharConst(
+                                   Y
+                                  ) [CharConst]
+                                ) [FactorConst]
+                              ) [FactorSingle]
+                            ) [TermSingle]
+                          ) [ExprTerm]
+                        ) [PrintExpr]
+                      ) [Statements]
+                      PrintExpr(
+                        PrintBegin(
+                        ) [PrintBegin]
+                        ExprTerm(
+                          TermSingle(
+                            FactorSingle(
+                              FactorConst(
+                                CharConst(
+                                 F
+                                ) [CharConst]
+                              ) [FactorConst]
+                            ) [FactorSingle]
+                          ) [TermSingle]
+                        ) [ExprTerm]
+                      ) [PrintExpr]
+                    ) [Statements]
+                    PrintExpr(
+                      PrintBegin(
+                      ) [PrintBegin]
+                      ExprTerm(
+                        TermSingle(
+                          FactorSingle(
+                            FactorDesignator(
+                              DesignatorIdent(
+                               eol
+                              ) [DesignatorIdent]
+                            ) [FactorDesignator]
+                          ) [FactorSingle]
+                        ) [TermSingle]
+                      ) [ExprTerm]
+                    ) [PrintExpr]
+                  ) [Statements]
+                ) [ConstructorOrMethod]
+              ) [MethodDecl]
+            ) [ClassMethodDecl]
+          ) [ConsturctorDeclarations]
+        ) [ClassFiledConstrMethodDeclarations]
+      ) [ClassDecl]
+    ) [ClassDeclaration]
+  ) [Declarations]
+  MethodDeclarations(
+    MethodDeclarations(
+      NoMethodDecl(
+      ) [NoMethodDecl]
+      MethodDecl(
+        MethodTypeName(
+          NoReturn(
+          ) [NoReturn]
+         fun
+        ) [MethodTypeName]
+        ConstructorOrMethod(
+          FormParams(
+            FormalParamDeclarationSingle(
+              FormalParamDeclaration(
+                Type(
+                 X
+                ) [Type]
+               x
+              ) [FormalParamDeclaration]
+            ) [FormalParamDeclarationSingle]
+          ) [FormParams]
+          NoLocalVarDecl(
+          ) [NoLocalVarDecl]
+          Statements(
+            Statements(
+              Statements(
+                NoStmt(
+                ) [NoStmt]
+                PrintExpr(
+                  PrintBegin(
+                  ) [PrintBegin]
+                  ExprTerm(
+                    TermSingle(
+                      FactorSingle(
+                        FactorConst(
+                          CharConst(
+                           G
+                          ) [CharConst]
+                        ) [FactorConst]
+                      ) [FactorSingle]
+                    ) [TermSingle]
+                  ) [ExprTerm]
+                ) [PrintExpr]
+              ) [Statements]
+              PrintExpr(
+                PrintBegin(
+                ) [PrintBegin]
+                ExprTerm(
+                  TermSingle(
+                    FactorSingle(
+                      FactorConst(
+                        CharConst(
+                         F
+                        ) [CharConst]
+                      ) [FactorConst]
+                    ) [FactorSingle]
+                  ) [TermSingle]
+                ) [ExprTerm]
+              ) [PrintExpr]
+            ) [Statements]
+            PrintExpr(
+              PrintBegin(
+              ) [PrintBegin]
+              ExprTerm(
+                TermSingle(
+                  FactorSingle(
+                    FactorDesignator(
+                      DesignatorIdent(
+                       eol
+                      ) [DesignatorIdent]
+                    ) [FactorDesignator]
+                  ) [FactorSingle]
+                ) [TermSingle]
+              ) [ExprTerm]
+            ) [PrintExpr]
+          ) [Statements]
+        ) [ConstructorOrMethod]
+      ) [MethodDecl]
+    ) [MethodDeclarations]
+    MethodDecl(
+      MethodTypeName(
+        NoReturn(
+        ) [NoReturn]
+       main
+      ) [MethodTypeName]
+      ConstructorOrMethod(
+        NoFormPars(
+        ) [NoFormPars]
+        LocalVarDeclarations(
+          NoLocalVarDecl(
+          ) [NoLocalVarDecl]
+          LocalVarDeclaration(
+            Type(
+             X
+            ) [Type]
+            SingleLocalVarIdent(
+              LocalVarIdentifierOne(
+               x
+              ) [LocalVarIdentifierOne]
+            ) [SingleLocalVarIdent]
+          ) [LocalVarDeclaration]
+        ) [LocalVarDeclarations]
+        Statements(
+          Statements(
+            Statements(
+              Statements(
+                Statements(
+                  Statements(
+                    NoStmt(
+                    ) [NoStmt]
+                    DesignatorStmt(
+                      DesignatorAssignStatement(
+                        DesignatorIdent(
+                         x
+                        ) [DesignatorIdent]
+                        DesignatorAssignment(
+                          ExprTerm(
+                            TermSingle(
+                              FactorSingle(
+                                FactorNewConstructor(
+                                  Type(
+                                   X
+                                  ) [Type]
+                                  ConstructorCallBegin(
+                                  ) [ConstructorCallBegin]
+                                  NoActuals(
+                                  ) [NoActuals]
+                                ) [FactorNewConstructor]
+                              ) [FactorSingle]
+                            ) [TermSingle]
+                          ) [ExprTerm]
+                        ) [DesignatorAssignment]
+                      ) [DesignatorAssignStatement]
+                    ) [DesignatorStmt]
+                  ) [Statements]
+                  DesignatorStmt(
+                    DesignatorOtherStmt(
+                      DesignatorMethodCall(
+                        MethodCall(
+                          MethodCallBegin(
+                            DesignatorClass(
+                              DesignatorIdent(
+                               x
+                              ) [DesignatorIdent]
+                             fun
+                            ) [DesignatorClass]
+                          ) [MethodCallBegin]
+                          NoActuals(
+                          ) [NoActuals]
+                        ) [MethodCall]
+                      ) [DesignatorMethodCall]
+                    ) [DesignatorOtherStmt]
+                  ) [DesignatorStmt]
+                ) [Statements]
+                DesignatorStmt(
+                  DesignatorOtherStmt(
+                    DesignatorMethodCall(
+                      MethodCall(
+                        MethodCallBegin(
+                          DesignatorIdent(
+                           fun
+                          ) [DesignatorIdent]
+                        ) [MethodCallBegin]
+                        Actuals(
+                          ActualParam(
+                            ExprTerm(
+                              TermSingle(
+                                FactorSingle(
+                                  FactorDesignator(
+                                    DesignatorIdent(
+                                     x
+                                    ) [DesignatorIdent]
+                                  ) [FactorDesignator]
+                                ) [FactorSingle]
+                              ) [TermSingle]
+                            ) [ExprTerm]
+                          ) [ActualParam]
+                        ) [Actuals]
+                      ) [MethodCall]
+                    ) [DesignatorMethodCall]
+                  ) [DesignatorOtherStmt]
+                ) [DesignatorStmt]
+              ) [Statements]
+              DesignatorStmt(
+                DesignatorAssignStatement(
+                  DesignatorIdent(
+                   x
+                  ) [DesignatorIdent]
+                  DesignatorAssignment(
+                    ExprTerm(
+                      TermSingle(
+                        FactorSingle(
+                          FactorNewConstructor(
+                            Type(
+                             Y
+                            ) [Type]
+                            ConstructorCallBegin(
+                            ) [ConstructorCallBegin]
+                            NoActuals(
+                            ) [NoActuals]
+                          ) [FactorNewConstructor]
+                        ) [FactorSingle]
+                      ) [TermSingle]
+                    ) [ExprTerm]
+                  ) [DesignatorAssignment]
+                ) [DesignatorAssignStatement]
+              ) [DesignatorStmt]
+            ) [Statements]
+            DesignatorStmt(
+              DesignatorOtherStmt(
+                DesignatorMethodCall(
+                  MethodCall(
+                    MethodCallBegin(
+                      DesignatorClass(
+                        DesignatorIdent(
+                         x
+                        ) [DesignatorIdent]
+                       fun
+                      ) [DesignatorClass]
+                    ) [MethodCallBegin]
+                    NoActuals(
+                    ) [NoActuals]
+                  ) [MethodCall]
+                ) [DesignatorMethodCall]
+              ) [DesignatorOtherStmt]
+            ) [DesignatorStmt]
+          ) [Statements]
+          DesignatorStmt(
+            DesignatorOtherStmt(
+              DesignatorMethodCall(
+                MethodCall(
+                  MethodCallBegin(
+                    DesignatorIdent(
+                     fun
+                    ) [DesignatorIdent]
+                  ) [MethodCallBegin]
+                  Actuals(
+                    ActualParam(
+                      ExprTerm(
+                        TermSingle(
+                          FactorSingle(
+                            FactorDesignator(
+                              DesignatorIdent(
+                               x
+                              ) [DesignatorIdent]
+                            ) [FactorDesignator]
+                          ) [FactorSingle]
+                        ) [TermSingle]
+                      ) [ExprTerm]
+                    ) [ActualParam]
+                  ) [Actuals]
+                ) [MethodCall]
+              ) [DesignatorMethodCall]
+            ) [DesignatorOtherStmt]
+          ) [DesignatorStmt]
+        ) [Statements]
+      ) [ConstructorOrMethod]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  20:53:24,129 - ===================================
+INFO  20:53:24,133 - Obradjuje se funkcija fun na liniji 5
+INFO  20:53:24,137 - Koriscenje konstante X na liniji 6
+INFO  20:53:24,137 - Koriscenje konstante F na liniji 7
+INFO  20:53:24,138 - Obradjuje se funkcija fun na liniji 15
+INFO  20:53:24,138 - Koriscenje konstante Y na liniji 16
+INFO  20:53:24,138 - Koriscenje konstante F na liniji 17
+INFO  20:53:24,138 - Obradjuje se funkcija fun na liniji 24
+INFO  20:53:24,138 - Koriscenje konstante G na liniji 25
+INFO  20:53:24,138 - Koriscenje konstante F na liniji 26
+INFO  20:53:24,138 - Obradjuje se funkcija main na liniji 31
+INFO  20:53:24,138 - local var x 4
+INFO  20:53:24,138 - Pristupa se metodi klase  na liniji 33
+INFO  20:53:24,138 - Pristupa se metodi klase  na liniji 37
+=====================SYMBOL TABLE DUMP=========================
+Type int: int, -1, -1 
+Type char: char, -1, -1 
+Con eol: char, 10, 0 
+Con null: , 0, 0 
+Meth chr: char, 0, 1 
+   Var i: int, 0, 1 
+
+Meth ord: int, 0, 1 
+   Var ch: char, 0, 1 
+
+Meth len: int, 0, 1 
+   Var arr: Arr of notype, 0, 1 
+
+Type bool: , -1, -1 
+Prog test4: notype, 0, 1 
+   Type X: , 0, 0 
+   Type Y: , 0, 0 
+   Meth fun: notype, 0, 1 
+      Var x: , 0, 1 
+
+   Meth main: notype, 0, 0 
+      Var x: , 0, 1 
+
+
+
+INFO  20:53:24,139 - ==============CODE==================
+INFO  20:53:24,146 - Parsiranje uspesno izvrseno!

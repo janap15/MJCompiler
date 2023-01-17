@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.io.Reader;
 
 import java_cup.runtime.Symbol;
@@ -18,7 +19,7 @@ import rs.ac.bg.etf.pp1.util.Log4JUtils;
 import rs.etf.pp1.mj.runtime.Code;
 import rs.etf.pp1.symboltable.Tab;
 
-public class MJParserTest {
+public class Compiler {
 
 	static {
 		DOMConfigurator.configure(Log4JUtils.instance().findLoggerConfigFile());
@@ -27,12 +28,17 @@ public class MJParserTest {
 	
 	public static void main(String[] args) throws Exception {
 		
-		Logger log = Logger.getLogger(MJParserTest.class);
+		Logger log = Logger.getLogger(Compiler.class);
 		
 		Reader br = null;
 		try {
-			File sourceCode = new File("test/testCode.mj");
+			File sourceCode = new File("test/mod1.mj");
 			log.info("Compiling source file: " + sourceCode.getAbsolutePath());
+			
+//			File fileErr = new File("test/test4.err");
+//			FileOutputStream fosErr = new FileOutputStream(fileErr);
+//			PrintStream psErr = new PrintStream(fosErr);
+//			System.setErr(psErr);
 			
 			br = new BufferedReader(new FileReader(sourceCode));
 			Yylex lexer = new Yylex(br);
@@ -55,11 +61,10 @@ public class MJParserTest {
 			log.info("==============CODE==================");
 			
 			if (!p.errorDetected && analyzer.passed()) {
-				System.out.println("Parsiranje uspesno zavrseno!");
 				CodeGenerator codeGenerator = new CodeGenerator();
 				File objFile = new File("test/testCode.obj");
 				if (objFile.exists()) objFile.delete();
-				
+				Code.dataSize = analyzer.getGlobVarsCnt();
 				prog.traverseBottomUp(codeGenerator);
 				Code.mainPc = codeGenerator.getMainPC();
 				Code.write(new FileOutputStream(objFile));

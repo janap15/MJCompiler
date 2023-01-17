@@ -1,0 +1,348 @@
+INFO  20:35:32,259 - Compiling source file: C:\Users\Jana\Desktop\SEDMI_SEMESTAR\PP1\Projekat\workspace\MJCompiler\test\test201.mj
+INFO  20:35:32,351 - #2 program
+INFO  20:35:32,351 - #46 test201
+INFO  20:35:32,351 - #11 class
+INFO  20:35:32,353 - #46 A
+INFO  20:35:32,353 - #3 {
+INFO  20:35:32,354 - #46 int
+INFO  20:35:32,355 - #46 a
+INFO  20:35:32,356 - #9 [
+INFO  20:35:32,356 - #10 ]
+INFO  20:35:32,356 - #6 ,
+INFO  20:35:32,357 - #46 arr
+INFO  20:35:32,357 - #9 [
+INFO  20:35:32,357 - #6 ,
+ERROR 20:35:32,357 - Sintaksna greska na liniji 4
+INFO  20:35:32,357 - #46 b
+INFO  20:35:32,358 - #6 ,
+INFO  20:35:32,358 - #46 c
+INFO  20:35:32,358 - #5 ;
+INFO  20:35:32,358 - #46 int
+ERROR 20:35:32,358 - Oporavak od greske pri deklaraciji polja unutrasnje klase do ;
+INFO  20:35:32,359 - #6 ,
+ERROR 20:35:32,359 - Sintaksna greska na liniji 5
+INFO  20:35:32,359 - #5 ;
+INFO  20:35:32,359 - #46 int
+ERROR 20:35:32,359 - Oporavak od greske pri deklaraciji polja unutrasnje klase do ;
+INFO  20:35:32,360 - #6 ,
+ERROR 20:35:32,360 - Sintaksna greska na liniji 6
+INFO  20:35:32,360 - #46 d
+INFO  20:35:32,360 - #5 ;
+INFO  20:35:32,360 - #46 prom
+ERROR 20:35:32,360 - Oporavak od greske pri deklaraciji polja unutrasnje klase do ;
+INFO  20:35:32,360 - #3 {
+ERROR 20:35:32,360 - Sintaksna greska na liniji 8
+INFO  20:35:32,360 - #4 }
+INFO  20:35:32,360 - #4 }
+INFO  20:35:32,360 - #11 class
+INFO  20:35:32,360 - #46 B
+INFO  20:35:32,360 - #12 extends
+INFO  20:35:32,361 - #3 {
+INFO  20:35:32,361 - #46 int
+INFO  20:35:32,361 - #46 a
+INFO  20:35:32,361 - #9 [
+INFO  20:35:32,361 - #6 ,
+INFO  20:35:32,361 - #6 ,
+INFO  20:35:32,361 - #46 b
+INFO  20:35:32,361 - #6 ,
+INFO  20:35:32,361 - #46 c
+INFO  20:35:32,361 - #6 ,
+INFO  20:35:32,361 - #5 ;
+INFO  20:35:32,361 - #3 {
+ERROR 20:35:32,361 - Oporavak od greske pri deklaraciji polja unutrasnje klase do ;
+INFO  20:35:32,361 - #15 void
+INFO  20:35:32,362 - #46 fun
+INFO  20:35:32,363 - #13 (
+INFO  20:35:32,364 - #14 )
+INFO  20:35:32,364 - #3 {
+INFO  20:35:32,365 - #4 }
+INFO  20:35:32,366 - #4 }
+INFO  20:35:32,368 - #4 }
+INFO  20:35:32,368 - #11 class
+INFO  20:35:32,369 - #46 C
+INFO  20:35:32,369 - #12 extends
+INFO  20:35:32,369 - #46 A
+INFO  20:35:32,370 - #6 ,
+ERROR 20:35:32,370 - Sintaksna greska na liniji 19
+INFO  20:35:32,370 - #46 B
+INFO  20:35:32,370 - #3 {
+INFO  20:35:32,370 - #46 bool
+ERROR 20:35:32,373 - Oporavak od greske pri deklaraciji prosirenja natklase
+INFO  20:35:32,374 - #46 a
+INFO  20:35:32,374 - #5 ;
+INFO  20:35:32,374 - #3 {
+INFO  20:35:32,374 - #4 }
+INFO  20:35:32,374 - #4 }
+INFO  20:35:32,374 - #3 {
+INFO  20:35:32,374 - #15 void
+INFO  20:35:32,375 - #46 f
+INFO  20:35:32,375 - #13 (
+INFO  20:35:32,375 - #46 char
+INFO  20:35:32,375 - #46 ch
+INFO  20:35:32,375 - #6 ,
+INFO  20:35:32,375 - #46 int
+INFO  20:35:32,376 - #46 a
+INFO  20:35:32,376 - #6 ,
+INFO  20:35:32,376 - #46 int
+INFO  20:35:32,376 - #46 arg
+INFO  20:35:32,376 - #14 )
+INFO  20:35:32,376 - #46 int
+INFO  20:35:32,376 - #46 x
+INFO  20:35:32,376 - #5 ;
+INFO  20:35:32,376 - #3 {
+INFO  20:35:32,377 - #46 x
+INFO  20:35:32,377 - #7 =
+INFO  20:35:32,377 - #46 x
+INFO  20:35:32,377 - #33 -
+INFO  20:35:32,378 - #46 arg
+INFO  20:35:32,379 - #32 +
+INFO  20:35:32,379 - #46 a
+INFO  20:35:32,381 - #5 ;
+INFO  20:35:32,381 - #4 }
+INFO  20:35:32,381 - #15 void
+INFO  20:35:32,381 - #46 main
+INFO  20:35:32,381 - #13 (
+INFO  20:35:32,381 - #14 )
+INFO  20:35:32,382 - #3 {
+INFO  20:35:32,382 - #4 }
+INFO  20:35:32,382 - #4 }
+INFO  20:35:32,395 - Program(
+  ProgramName(
+   test201
+  ) [ProgramName]
+  Declarations(
+    Declarations(
+      NoDecl(
+      ) [NoDecl]
+      ClassDeclaration(
+        ClassDecl(
+          ClassName(
+           A
+          ) [ClassName]
+          NoExtends(
+          ) [NoExtends]
+          ClassFiledConstrMethodDeclarations(
+            ClassFieldDeclarations(
+              ClassFieldDeclarations(
+                ClassFieldDeclarations(
+                  ClassFieldDeclarations(
+                    NoClassFieldDecl(
+                    ) [NoClassFieldDecl]
+                    ErrSemiClassField(
+                    ) [ErrSemiClassField]
+                  ) [ClassFieldDeclarations]
+                  ErrSemiClassField(
+                  ) [ErrSemiClassField]
+                ) [ClassFieldDeclarations]
+                ErrSemiClassField(
+                ) [ErrSemiClassField]
+              ) [ClassFieldDeclarations]
+              ErrSemiClassField(
+              ) [ErrSemiClassField]
+            ) [ClassFieldDeclarations]
+            ConsturctorDeclarations(
+              NoConstructor(
+              ) [NoConstructor]
+              ClassMethodDecl(
+                MethodDecl(
+                  MethodTypeName(
+                    NoReturn(
+                    ) [NoReturn]
+                   fun
+                  ) [MethodTypeName]
+                  ConstructorOrMethod(
+                    NoFormPars(
+                    ) [NoFormPars]
+                    NoLocalVarDecl(
+                    ) [NoLocalVarDecl]
+                    NoStmt(
+                    ) [NoStmt]
+                  ) [ConstructorOrMethod]
+                ) [MethodDecl]
+              ) [ClassMethodDecl]
+            ) [ConsturctorDeclarations]
+          ) [ClassFiledConstrMethodDeclarations]
+        ) [ClassDecl]
+      ) [ClassDeclaration]
+    ) [Declarations]
+    ClassDeclaration(
+      ClassDecl(
+        ClassName(
+         C
+        ) [ClassName]
+        ErrExtends(
+        ) [ErrExtends]
+        ClassFiledConstrMethodDeclarations(
+          ClassFieldDeclarations(
+            NoClassFieldDecl(
+            ) [NoClassFieldDecl]
+            ClassFieldDeclaration(
+              Type(
+               bool
+              ) [Type]
+              SingleClassFieldIdent(
+                ClassFieldIdentifierOne(
+                 a
+                ) [ClassFieldIdentifierOne]
+              ) [SingleClassFieldIdent]
+            ) [ClassFieldDeclaration]
+          ) [ClassFieldDeclarations]
+          NoConstructor(
+          ) [NoConstructor]
+        ) [ClassFiledConstrMethodDeclarations]
+      ) [ClassDecl]
+    ) [ClassDeclaration]
+  ) [Declarations]
+  MethodDeclarations(
+    MethodDeclarations(
+      NoMethodDecl(
+      ) [NoMethodDecl]
+      MethodDecl(
+        MethodTypeName(
+          NoReturn(
+          ) [NoReturn]
+         f
+        ) [MethodTypeName]
+        ConstructorOrMethod(
+          FormParams(
+            FormalParamDeclarations(
+              FormalParamDeclarations(
+                FormalParamDeclarationSingle(
+                  FormalParamDeclaration(
+                    Type(
+                     char
+                    ) [Type]
+                   ch
+                  ) [FormalParamDeclaration]
+                ) [FormalParamDeclarationSingle]
+                FormalParamDeclaration(
+                  Type(
+                   int
+                  ) [Type]
+                 a
+                ) [FormalParamDeclaration]
+              ) [FormalParamDeclarations]
+              FormalParamDeclaration(
+                Type(
+                 int
+                ) [Type]
+               arg
+              ) [FormalParamDeclaration]
+            ) [FormalParamDeclarations]
+          ) [FormParams]
+          LocalVarDeclarations(
+            NoLocalVarDecl(
+            ) [NoLocalVarDecl]
+            LocalVarDeclaration(
+              Type(
+               int
+              ) [Type]
+              SingleLocalVarIdent(
+                LocalVarIdentifierOne(
+                 x
+                ) [LocalVarIdentifierOne]
+              ) [SingleLocalVarIdent]
+            ) [LocalVarDeclaration]
+          ) [LocalVarDeclarations]
+          Statements(
+            NoStmt(
+            ) [NoStmt]
+            DesignatorStmt(
+              DesignatorAssignStatement(
+                DesignatorIdent(
+                 x
+                ) [DesignatorIdent]
+                DesignatorAssignment(
+                  AddopTerms(
+                    AddopTerms(
+                      ExprTerm(
+                        TermSingle(
+                          FactorSingle(
+                            FactorDesignator(
+                              DesignatorIdent(
+                               x
+                              ) [DesignatorIdent]
+                            ) [FactorDesignator]
+                          ) [FactorSingle]
+                        ) [TermSingle]
+                      ) [ExprTerm]
+                      AddopMinusSign(
+                      ) [AddopMinusSign]
+                      FactorSingle(
+                        FactorDesignator(
+                          DesignatorIdent(
+                           arg
+                          ) [DesignatorIdent]
+                        ) [FactorDesignator]
+                      ) [FactorSingle]
+                    ) [AddopTerms]
+                    AddopPlusSign(
+                    ) [AddopPlusSign]
+                    FactorSingle(
+                      FactorDesignator(
+                        DesignatorIdent(
+                         a
+                        ) [DesignatorIdent]
+                      ) [FactorDesignator]
+                    ) [FactorSingle]
+                  ) [AddopTerms]
+                ) [DesignatorAssignment]
+              ) [DesignatorAssignStatement]
+            ) [DesignatorStmt]
+          ) [Statements]
+        ) [ConstructorOrMethod]
+      ) [MethodDecl]
+    ) [MethodDeclarations]
+    MethodDecl(
+      MethodTypeName(
+        NoReturn(
+        ) [NoReturn]
+       main
+      ) [MethodTypeName]
+      ConstructorOrMethod(
+        NoFormPars(
+        ) [NoFormPars]
+        NoLocalVarDecl(
+        ) [NoLocalVarDecl]
+        NoStmt(
+        ) [NoStmt]
+      ) [ConstructorOrMethod]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  20:35:32,395 - ===================================
+INFO  20:35:32,399 - Obradjuje se funkcija fun na liniji 14
+INFO  20:35:32,399 - field a 5
+INFO  20:35:32,400 - Obradjuje se funkcija f na liniji 25
+INFO  20:35:32,400 - local var x 1
+INFO  20:35:32,400 - Obradjuje se funkcija main na liniji 30
+=====================SYMBOL TABLE DUMP=========================
+Type int: int, -1, -1 
+Type char: char, -1, -1 
+Con eol: char, 10, 0 
+Con null: , 0, 0 
+Meth chr: char, 0, 1 
+   Var i: int, 0, 1 
+
+Meth ord: int, 0, 1 
+   Var ch: char, 0, 1 
+
+Meth len: int, 0, 1 
+   Var arr: Arr of notype, 0, 1 
+
+Type bool: , -1, -1 
+Prog test201: notype, 0, 1 
+   Type A: , 0, 0 
+   Type C: , 0, 0 
+   Meth f: notype, 0, 3 
+      Var ch: char, 0, 1 
+      Var a: int, 1, 1 
+      Var arg: int, 2, 1 
+      Var x: int, 3, 1 
+
+   Meth main: notype, 0, 0 
+
+
+
+INFO  20:35:32,400 - ==============CODE==================
+ERROR 20:35:32,401 - Parsiranje nije uspesno izvrseno!

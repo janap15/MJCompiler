@@ -1,8 +1,5 @@
-// test za oporavak - sintaksna analiza B nivo
+program test2
 
-program p
-
-const int size = 10;
 class A {
 	int a[], arr[, b, c;
 	int , ;
@@ -24,14 +21,13 @@ class C extends A, B {
 	{
 	}
 }
-A globalA;
 {
 	void f(char ch, int a, int arg)
 		int x;
 	{
-		x = arg;
+		x = x - arg + a;
 	}
-	void main() int x, i; char c;
+	void main()
 	{
 	}
 }

@@ -1,0 +1,458 @@
+INFO  20:30:50,269 - Compiling source file: C:\Users\Jana\Desktop\SEDMI_SEMESTAR\PP1\Projekat\workspace\MJCompiler\test\test101.mj
+INFO  20:30:50,371 - #2 program
+INFO  20:30:50,371 - #46 test101
+INFO  20:30:50,371 - #8 const
+INFO  20:30:50,372 - #46 bool
+INFO  20:30:50,372 - #46 cnst1
+INFO  20:30:50,373 - #7 =
+INFO  20:30:50,373 - #49 false
+INFO  20:30:50,373 - #5 ;
+INFO  20:30:50,374 - #8 const
+INFO  20:30:50,375 - #46 char
+INFO  20:30:50,375 - #46 cnst2
+INFO  20:30:50,375 - #7 =
+INFO  20:30:50,375 - #48 i
+INFO  20:30:50,375 - #6 ,
+INFO  20:30:50,375 - #46 cnst3
+INFO  20:30:50,375 - #7 =
+INFO  20:30:50,375 - #48 u
+INFO  20:30:50,375 - #5 ;
+INFO  20:30:50,376 - #11 class
+INFO  20:30:50,376 - #46 D1
+INFO  20:30:50,376 - #3 {
+INFO  20:30:50,377 - #4 }
+INFO  20:30:50,378 - #11 class
+INFO  20:30:50,379 - #46 D2
+INFO  20:30:50,379 - #12 extends
+INFO  20:30:50,379 - #46 D1
+INFO  20:30:50,379 - #3 {
+INFO  20:30:50,379 - #46 char
+INFO  20:30:50,379 - #46 niz
+INFO  20:30:50,380 - #9 [
+INFO  20:30:50,380 - #10 ]
+INFO  20:30:50,380 - #5 ;
+INFO  20:30:50,381 - #4 }
+INFO  20:30:50,381 - #11 class
+INFO  20:30:50,381 - #46 D3
+INFO  20:30:50,381 - #12 extends
+INFO  20:30:50,381 - #46 D2
+INFO  20:30:50,381 - #3 {
+INFO  20:30:50,381 - #46 char
+INFO  20:30:50,381 - #46 a2
+INFO  20:30:50,381 - #5 ;
+INFO  20:30:50,381 - #3 {
+INFO  20:30:50,381 - #46 int
+INFO  20:30:50,382 - #46 f1
+INFO  20:30:50,382 - #13 (
+INFO  20:30:50,383 - #14 )
+INFO  20:30:50,383 - #3 {
+INFO  20:30:50,385 - #21 return
+INFO  20:30:50,386 - #47 1
+INFO  20:30:50,387 - #5 ;
+INFO  20:30:50,388 - #4 }
+INFO  20:30:50,388 - #46 int
+INFO  20:30:50,390 - #46 func1
+INFO  20:30:50,390 - #13 (
+INFO  20:30:50,390 - #46 int
+INFO  20:30:50,390 - #46 param1
+INFO  20:30:50,390 - #14 )
+INFO  20:30:50,390 - #3 {
+INFO  20:30:50,391 - #21 return
+INFO  20:30:50,391 - #46 param1
+INFO  20:30:50,391 - #5 ;
+INFO  20:30:50,391 - #4 }
+INFO  20:30:50,391 - #15 void
+INFO  20:30:50,392 - #46 f2
+INFO  20:30:50,393 - #13 (
+INFO  20:30:50,393 - #46 int
+INFO  20:30:50,393 - #46 params
+INFO  20:30:50,393 - #9 [
+INFO  20:30:50,397 - #10 ]
+INFO  20:30:50,397 - #6 ,
+INFO  20:30:50,397 - #46 char
+INFO  20:30:50,397 - #46 param2
+INFO  20:30:50,397 - #14 )
+INFO  20:30:50,398 - #46 int
+INFO  20:30:50,398 - #46 f2a
+INFO  20:30:50,398 - #5 ;
+INFO  20:30:50,398 - #3 {
+INFO  20:30:50,399 - #4 }
+INFO  20:30:50,399 - #4 }
+INFO  20:30:50,399 - #4 }
+INFO  20:30:50,399 - #3 {
+INFO  20:30:50,399 - #15 void
+INFO  20:30:50,400 - #46 main
+INFO  20:30:50,400 - #13 (
+INFO  20:30:50,400 - #14 )
+INFO  20:30:50,400 - #46 int
+INFO  20:30:50,400 - #46 yy
+INFO  20:30:50,401 - #5 ;
+INFO  20:30:50,401 - #3 {
+INFO  20:30:50,401 - #46 yy
+INFO  20:30:50,401 - #7 =
+INFO  20:30:50,401 - #47 2
+INFO  20:30:50,401 - #5 ;
+INFO  20:30:50,401 - #4 }
+INFO  20:30:50,402 - #4 }
+INFO  20:30:50,415 - Program(
+  ProgramName(
+   test101
+  ) [ProgramName]
+  Declarations(
+    Declarations(
+      Declarations(
+        Declarations(
+          Declarations(
+            NoDecl(
+            ) [NoDecl]
+            ConstDeclaration(
+              ConstDecl(
+                Type(
+                 bool
+                ) [Type]
+                SingleConstIdent(
+                  ConstIdent(
+                   cnst1
+                    BoolConst(
+                     false
+                    ) [BoolConst]
+                  ) [ConstIdent]
+                ) [SingleConstIdent]
+              ) [ConstDecl]
+            ) [ConstDeclaration]
+          ) [Declarations]
+          ConstDeclaration(
+            ConstDecl(
+              Type(
+               char
+              ) [Type]
+              ConstIdentifierList(
+                SingleConstIdent(
+                  ConstIdent(
+                   cnst2
+                    CharConst(
+                     i
+                    ) [CharConst]
+                  ) [ConstIdent]
+                ) [SingleConstIdent]
+                ConstIdent(
+                 cnst3
+                  CharConst(
+                   u
+                  ) [CharConst]
+                ) [ConstIdent]
+              ) [ConstIdentifierList]
+            ) [ConstDecl]
+          ) [ConstDeclaration]
+        ) [Declarations]
+        ClassDeclaration(
+          ClassDecl(
+            ClassName(
+             D1
+            ) [ClassName]
+            NoExtends(
+            ) [NoExtends]
+            ClassFieldDeclarationsList(
+              NoClassFieldDecl(
+              ) [NoClassFieldDecl]
+            ) [ClassFieldDeclarationsList]
+          ) [ClassDecl]
+        ) [ClassDeclaration]
+      ) [Declarations]
+      ClassDeclaration(
+        ClassDecl(
+          ClassName(
+           D2
+          ) [ClassName]
+          TypeExtends(
+            Type(
+             D1
+            ) [Type]
+          ) [TypeExtends]
+          ClassFieldDeclarationsList(
+            ClassFieldDeclarations(
+              NoClassFieldDecl(
+              ) [NoClassFieldDecl]
+              ClassFieldDeclaration(
+                Type(
+                 char
+                ) [Type]
+                SingleClassFieldIdent(
+                  ClassFieldIdentifierArray(
+                   niz
+                    Brackets(
+                    ) [Brackets]
+                  ) [ClassFieldIdentifierArray]
+                ) [SingleClassFieldIdent]
+              ) [ClassFieldDeclaration]
+            ) [ClassFieldDeclarations]
+          ) [ClassFieldDeclarationsList]
+        ) [ClassDecl]
+      ) [ClassDeclaration]
+    ) [Declarations]
+    ClassDeclaration(
+      ClassDecl(
+        ClassName(
+         D3
+        ) [ClassName]
+        TypeExtends(
+          Type(
+           D2
+          ) [Type]
+        ) [TypeExtends]
+        ClassFiledConstrMethodDeclarations(
+          ClassFieldDeclarations(
+            NoClassFieldDecl(
+            ) [NoClassFieldDecl]
+            ClassFieldDeclaration(
+              Type(
+               char
+              ) [Type]
+              SingleClassFieldIdent(
+                ClassFieldIdentifierOne(
+                 a2
+                ) [ClassFieldIdentifierOne]
+              ) [SingleClassFieldIdent]
+            ) [ClassFieldDeclaration]
+          ) [ClassFieldDeclarations]
+          ConsturctorDeclarations(
+            ConsturctorDeclarations(
+              ConsturctorDeclarations(
+                NoConstructor(
+                ) [NoConstructor]
+                ClassMethodDecl(
+                  MethodDecl(
+                    MethodTypeName(
+                      RetType(
+                        Type(
+                         int
+                        ) [Type]
+                      ) [RetType]
+                     f1
+                    ) [MethodTypeName]
+                    ConstructorOrMethod(
+                      NoFormPars(
+                      ) [NoFormPars]
+                      NoLocalVarDecl(
+                      ) [NoLocalVarDecl]
+                      Statements(
+                        NoStmt(
+                        ) [NoStmt]
+                        ReturnExpr(
+                          ReturnBegin(
+                          ) [ReturnBegin]
+                          ExprOptionalSingle(
+                            ExprTerm(
+                              TermSingle(
+                                FactorSingle(
+                                  FactorConst(
+                                    NumConst(
+                                     1
+                                    ) [NumConst]
+                                  ) [FactorConst]
+                                ) [FactorSingle]
+                              ) [TermSingle]
+                            ) [ExprTerm]
+                          ) [ExprOptionalSingle]
+                        ) [ReturnExpr]
+                      ) [Statements]
+                    ) [ConstructorOrMethod]
+                  ) [MethodDecl]
+                ) [ClassMethodDecl]
+              ) [ConsturctorDeclarations]
+              ClassMethodDecl(
+                MethodDecl(
+                  MethodTypeName(
+                    RetType(
+                      Type(
+                       int
+                      ) [Type]
+                    ) [RetType]
+                   func1
+                  ) [MethodTypeName]
+                  ConstructorOrMethod(
+                    FormParams(
+                      FormalParamDeclarationSingle(
+                        FormalParamDeclaration(
+                          Type(
+                           int
+                          ) [Type]
+                         param1
+                        ) [FormalParamDeclaration]
+                      ) [FormalParamDeclarationSingle]
+                    ) [FormParams]
+                    NoLocalVarDecl(
+                    ) [NoLocalVarDecl]
+                    Statements(
+                      NoStmt(
+                      ) [NoStmt]
+                      ReturnExpr(
+                        ReturnBegin(
+                        ) [ReturnBegin]
+                        ExprOptionalSingle(
+                          ExprTerm(
+                            TermSingle(
+                              FactorSingle(
+                                FactorDesignator(
+                                  DesignatorIdent(
+                                   param1
+                                  ) [DesignatorIdent]
+                                ) [FactorDesignator]
+                              ) [FactorSingle]
+                            ) [TermSingle]
+                          ) [ExprTerm]
+                        ) [ExprOptionalSingle]
+                      ) [ReturnExpr]
+                    ) [Statements]
+                  ) [ConstructorOrMethod]
+                ) [MethodDecl]
+              ) [ClassMethodDecl]
+            ) [ConsturctorDeclarations]
+            ClassMethodDecl(
+              MethodDecl(
+                MethodTypeName(
+                  NoReturn(
+                  ) [NoReturn]
+                 f2
+                ) [MethodTypeName]
+                ConstructorOrMethod(
+                  FormParams(
+                    FormalParamDeclarations(
+                      FormalParamDeclarationSingle(
+                        FormalParamDeclarationArray(
+                          Type(
+                           int
+                          ) [Type]
+                         params
+                          Brackets(
+                          ) [Brackets]
+                        ) [FormalParamDeclarationArray]
+                      ) [FormalParamDeclarationSingle]
+                      FormalParamDeclaration(
+                        Type(
+                         char
+                        ) [Type]
+                       param2
+                      ) [FormalParamDeclaration]
+                    ) [FormalParamDeclarations]
+                  ) [FormParams]
+                  LocalVarDeclarations(
+                    NoLocalVarDecl(
+                    ) [NoLocalVarDecl]
+                    LocalVarDeclaration(
+                      Type(
+                       int
+                      ) [Type]
+                      SingleLocalVarIdent(
+                        LocalVarIdentifierOne(
+                         f2a
+                        ) [LocalVarIdentifierOne]
+                      ) [SingleLocalVarIdent]
+                    ) [LocalVarDeclaration]
+                  ) [LocalVarDeclarations]
+                  NoStmt(
+                  ) [NoStmt]
+                ) [ConstructorOrMethod]
+              ) [MethodDecl]
+            ) [ClassMethodDecl]
+          ) [ConsturctorDeclarations]
+        ) [ClassFiledConstrMethodDeclarations]
+      ) [ClassDecl]
+    ) [ClassDeclaration]
+  ) [Declarations]
+  MethodDeclarations(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethodTypeName(
+        NoReturn(
+        ) [NoReturn]
+       main
+      ) [MethodTypeName]
+      ConstructorOrMethod(
+        NoFormPars(
+        ) [NoFormPars]
+        LocalVarDeclarations(
+          NoLocalVarDecl(
+          ) [NoLocalVarDecl]
+          LocalVarDeclaration(
+            Type(
+             int
+            ) [Type]
+            SingleLocalVarIdent(
+              LocalVarIdentifierOne(
+               yy
+              ) [LocalVarIdentifierOne]
+            ) [SingleLocalVarIdent]
+          ) [LocalVarDeclaration]
+        ) [LocalVarDeclarations]
+        Statements(
+          NoStmt(
+          ) [NoStmt]
+          DesignatorStmt(
+            DesignatorAssignStatement(
+              DesignatorIdent(
+               yy
+              ) [DesignatorIdent]
+              DesignatorAssignment(
+                ExprTerm(
+                  TermSingle(
+                    FactorSingle(
+                      FactorConst(
+                        NumConst(
+                         2
+                        ) [NumConst]
+                      ) [FactorConst]
+                    ) [FactorSingle]
+                  ) [TermSingle]
+                ) [ExprTerm]
+              ) [DesignatorAssignment]
+            ) [DesignatorAssignStatement]
+          ) [DesignatorStmt]
+        ) [Statements]
+      ) [ConstructorOrMethod]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  20:30:50,415 - ===================================
+INFO  20:30:50,421 - Koriscenje konstante false na liniji 3
+INFO  20:30:50,421 - Koriscenje konstante i na liniji 4
+INFO  20:30:50,421 - Koriscenje konstante u na liniji 4
+INFO  20:30:50,422 - field a2 2
+INFO  20:30:50,422 - Obradjuje se funkcija f1 na liniji 15
+INFO  20:30:50,422 - Koriscenje konstante 1 na liniji 15
+INFO  20:30:50,422 - Obradjuje se funkcija func1 na liniji 17
+INFO  20:30:50,422 - Obradjuje se funkcija f2 na liniji 19
+INFO  20:30:50,423 - local var f2a 1
+INFO  20:30:50,423 - Obradjuje se funkcija main na liniji 23
+INFO  20:30:50,423 - local var yy 1
+INFO  20:30:50,423 - Koriscenje konstante 2 na liniji 24
+=====================SYMBOL TABLE DUMP=========================
+Type int: int, -1, -1 
+Type char: char, -1, -1 
+Con eol: char, 10, 0 
+Con null: , 0, 0 
+Meth chr: char, 0, 1 
+   Var i: int, 0, 1 
+
+Meth ord: int, 0, 1 
+   Var ch: char, 0, 1 
+
+Meth len: int, 0, 1 
+   Var arr: Arr of notype, 0, 1 
+
+Type bool: , -1, -1 
+Prog test101: notype, 0, 1 
+   Con cnst1: , 0, 0 
+   Con cnst2: char, 105, 0 
+   Con cnst3: char, 117, 0 
+   Type D1: , 0, 0 
+   Type D2: , 0, 0 
+   Type D3: , 0, 0 
+   Meth main: notype, 0, 0 
+      Var yy: int, 0, 1 
+
+
+
+INFO  20:30:50,423 - ==============CODE==================
+INFO  20:30:50,430 - Parsiranje uspesno izvrseno!

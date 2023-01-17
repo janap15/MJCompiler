@@ -1,0 +1,26 @@
+program test1
+
+const bool cnst1 = $false;
+const char cnst2# = 'i', cnst3 = 'u'";
+
+class D1{}
+
+class D2 extends D1{
+	char niz[~];
+}
+
+class D3 extends D2{
+	char^ a2;
+	{
+		int f1(){ return 1\; }
+		
+		int func1(int param1){ return param1; }
+		
+		void f2(int params[], char param2) int f2a;	{}
+	}
+}
+{
+	void main() int yy; {
+		yy = !2;
+	}
+}
