@@ -344,8 +344,6 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		Tab.chainLocalSymbols(currentClass);
 	
 		Tab.closeScope();
-		//report_info("curr = " + currentClass.getMembersTable(), null);
-		//Tab.dump();
 		if (currentClass.getNumberOfFields() > classFieldsCnt) report_error("Ne sme se koristiti vise od " + classFieldsCnt + " polja!", null);
 		
 		constructorNum.put(currentClassName, currentClassConstr);
@@ -461,7 +459,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 			formalObj = formalIter.next();
 			Struct formalParamStruct = formalObj.getType();
 			Struct actParamStruct = actIter.next();
-			if (!isCompatibleWithAssign(formalParamStruct, actParamStruct)) {
+			if (!isCompatibleWithAssign(actParamStruct, formalParamStruct)) {
 				report_error("Stvarni parametri poziva funkcije ne odgovaraju parametrima formalnih argumenata funkcije!", methodCall);
 				return;
 			}
@@ -592,13 +590,13 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 							break;
 						}
 						else if (baseObj.getType().getKind() == Struct.Array && overridenObj.getType().getKind() != Struct.Array) {
-							if (!isCompatibleWithAssign(baseObj.getType().getElemType(), overridenIter.next().getType().getElemType())) {
+							if (!isCompatibleWithAssign(overridenIter.next().getType().getElemType(), baseObj.getType().getElemType())) {
 								hasError = true;
 								break;
 							}
 						}
 						else { 
-							if (!isCompatibleWithAssign(baseObj.getType(), overridenObj.getType())) {
+							if (!isCompatibleWithAssign(overridenObj.getType(), baseObj.getType())) {
 								hasError = true;
 								break;
 							}
@@ -677,6 +675,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	public void visit(ForeachBegin foreachBegin) {
 		Obj designatorObj = foreachBegin.getDesignator().obj;
 		Obj identifier = Tab.find(foreachBegin.getForeachIdent());
+		foreachBegin.obj = identifier;
 		
 		if (designatorObj.getType().getKind() != Struct.Array) {
 			report_error("Tip " + designatorObj.getName() + " mora biti niz!", foreachBegin);
@@ -692,7 +691,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 			report_error("Simbol " + identifier.getName() + " mora biti istog tipa kao i elementi niza" + designatorObj.getName() + "!", foreachBegin);
 			return;
 		}
-		
+				
 		foreachLen++;
 		
 	}
@@ -781,7 +780,6 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		Struct src = designatorAssignStmt.getDesignatorAssign().struct;
 		Struct dst = designatorAssignStmt.getDesignator().obj.getType();
 
-		//report_info("" + src + dst, null);
 		if (!isCompatibleWithAssign(src, dst)) {
 			report_error("Leva i desna strana moraju biti kompatibilne pri dodeli! ", designatorAssignStmt);
 		}
@@ -1084,13 +1082,8 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		for (int i = 1; i <= constructorCnt; i++) {
 			String constructorName = joker + className + i;
 			Obj constructor = classObj.getType().getMembersTable().searchKey(constructorName);
-			Collection<Obj> tabela = classObj.getType().getMembersTable().symbols();
-			for (Obj obj : tabela) {
-				System.out.println(obj.getName());
-			}
-			report_info(constructor.getName(), null);
-			Collection<Obj> formalParams = constructor.getLocalSymbols();
 			
+			Collection<Obj> formalParams = constructor.getLocalSymbols();
 			Iterator<Obj> formalIter = formalParams.iterator();
 			Iterator<Obj> thisIter = formalParams.iterator();
 			Iterator<Struct> actIter = actParams.iterator();
@@ -1108,9 +1101,9 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 				formalObj = formalIter.next();
 				Struct formalParamStruct = formalObj.getType();
 				Struct actParamStruct = actIter.next();
-				if (!isCompatibleWithAssign(formalParamStruct, actParamStruct)) {
-					report_error("Stvarni parametri poziva funkcije ne odgovaraju parametrima formalnih argumenata funkcije!", factorNewConstructor);
-					return;
+				if (!isCompatibleWithAssign(actParamStruct, formalParamStruct)) {
+					found = false;
+					break;
 				}
 				formalParamsCount--;
 				
@@ -1125,7 +1118,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 			}
 		}
 		
-		if (!found) report_error("Broj stvarnih i formalnih parametara nije isti!", factorNewConstructor);
+		if (!found) report_error("Broj stvarnih i formalnih parametara konstruktora nije isti!", factorNewConstructor);
 		
 	}
 	

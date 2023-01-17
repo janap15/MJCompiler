@@ -121,9 +121,9 @@ nonterminal WhileBegin WhileBegin;
 nonterminal ReadBegin ReadBegin;
 nonterminal ReturnBegin ReturnBegin;
 nonterminal PrintBegin PrintBegin;
-nonterminal ForeachBegin ForeachBegin;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramName, ConstType, MethodTypeName, MethodDecl, Designator, ClassName, DesignatorArrayLBracket, MethodCallBegin, ConstructorCallBegin, ConstructorBegin;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramName, ConstType, MethodTypeName, MethodDecl, Designator, ClassName, DesignatorArrayLBracket;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ForeachBegin, MethodCallBegin, ConstructorCallBegin, ConstructorBegin;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, ReturnType, Term, Expr, ExprOptional, Condition, Factor, CondTerm, CondFact, SingleTerm;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct DesignatorAssign, DesignatorOther, MethodCall;
 

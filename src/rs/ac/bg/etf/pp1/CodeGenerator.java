@@ -26,6 +26,7 @@ import rs.ac.bg.etf.pp1.ast.ContinueStatement;
 import rs.ac.bg.etf.pp1.ast.DesignatorArrayLBracket;
 import rs.ac.bg.etf.pp1.ast.DesignatorAssignStatement;
 import rs.ac.bg.etf.pp1.ast.DesignatorClass;
+import rs.ac.bg.etf.pp1.ast.DesignatorForEach;
 import rs.ac.bg.etf.pp1.ast.DesignatorIdent;
 import rs.ac.bg.etf.pp1.ast.DesignatorMethodCall;
 import rs.ac.bg.etf.pp1.ast.DesignatorMultiAssign;
@@ -39,6 +40,7 @@ import rs.ac.bg.etf.pp1.ast.FactorConst;
 import rs.ac.bg.etf.pp1.ast.FactorDesignator;
 import rs.ac.bg.etf.pp1.ast.FactorNewArray;
 import rs.ac.bg.etf.pp1.ast.FactorNewConstructor;
+import rs.ac.bg.etf.pp1.ast.ForeachBegin;
 import rs.ac.bg.etf.pp1.ast.IfBegin;
 import rs.ac.bg.etf.pp1.ast.IfCond;
 import rs.ac.bg.etf.pp1.ast.IfCondition;
@@ -90,7 +92,9 @@ public class CodeGenerator extends VisitorAdaptor {
 	private Stack<List<Integer>> breakCondAdr = new Stack<>();
 	
 	private Stack<Integer> elseAdr = new Stack<>();
-	private Stack<Integer> whileAdr = new Stack<>();
+	private Stack<Integer> whileOrForeachBeginAdr = new Stack<>();
+	private int foreachDepth = 0;
+	
 	private Stack<Integer> lastRelop = new Stack<>();
 	
 	private ArrayList<Obj> multiAssignList = new ArrayList<>();
@@ -168,7 +172,7 @@ public class CodeGenerator extends VisitorAdaptor {
 			
 			while (iter.hasNext()) {
 				Obj obj = iter.next();
-				if (obj.getKind() != Obj.Meth) continue; // skip fields
+				if (obj.getKind() != Obj.Meth || isConstructor(obj.getName())) continue; // skip fields
 				
 				// method name chars
 				for (char c : obj.getName().toCharArray()) {
@@ -224,13 +228,19 @@ public class CodeGenerator extends VisitorAdaptor {
 		
 		// generate entry
 		Code.put(Code.enter);
-		System.err.println("size " + methodObj.getLocalSymbols().size());
+		
 		Code.put(methodObj.getLevel());  // params cnt
 		Code.put(methodObj.getLocalSymbols().size());  // params and locals
 	}
 	
 	@Override
 	public void visit(ReturnExpr returnExpr) {
+		if (foreachDepth > 0) {			// pop (arr & ind)s from stack
+			for (int i = 0; i < foreachDepth; i++) {
+				Code.put(Code.pop);
+				Code.put(Code.pop);
+			}
+		}
 		Code.put(Code.exit);
 		Code.put(Code.return_);
 	}
@@ -328,23 +338,18 @@ public class CodeGenerator extends VisitorAdaptor {
 				break;
 			}
 		}
-		System.err.println("call begin" + isClassMeth);
+		
 		if (isClassMeth) {
-			System.err.println("abraka" + methodObj.getName());
 			calledMethodsStack.push(MethodType.CLASS_METH);
 			Code.put(Code.dup);   // this
 		}
 		else {
-			System.err.println("svraka" + methodObj.getName());
 			calledMethodsStack.push(MethodType.GLOBAL_FUNC);
 		}
-		System.err.println(calledMethodsStack.size());
-		
 	}
 	
 	@Override
 	public void visit(MethodCall methodCall) {
-		System.err.println("call " +calledMethodsStack.size());
 		calledMethodsStack.pop();
 		
 		Obj methodObj = methodCall.getMethodCallBegin().obj;
@@ -359,7 +364,6 @@ public class CodeGenerator extends VisitorAdaptor {
 		}
 		
 		if (!isClassMeth) {
-			System.err.println("kukuu" + methodObj.getName());
 			int offset = methodObj.getAdr() - Code.pc;
 			Code.put(Code.call);
 			Code.put2(offset);
@@ -378,7 +382,6 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	@Override
 	public void visit(ActualParam actualParam) {
-		System.err.println("actual param " + calledMethodsStack.size());
 		if (calledMethodsStack.peek() == MethodType.CLASS_METH) {
 			Code.put(Code.dup_x1);
 			Code.put(Code.pop);     // swapuje zbog this
@@ -392,7 +395,6 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	@Override
 	public void visit(ActualParams actualParams) {
-		System.err.println("actual params " + calledMethodsStack.size());
 		if (calledMethodsStack.peek() == MethodType.CLASS_METH) {
 			Code.put(Code.dup_x1);
 			Code.put(Code.pop);     // swapuje zbog this
@@ -458,13 +460,11 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	@Override
 	public void visit(ConstructorBegin constructorBegin) {
-		System.err.println("obj " + constructorBegin.obj.getName());
 		Obj methodObj = constructorBegin.obj;
 		methodObj.setAdr(Code.pc);
 		
 		// generate entry
 		Code.put(Code.enter);
-		System.err.println("size " + methodObj.getLevel());
 		Code.put(methodObj.getLevel());  // params cnt
 		Code.put(methodObj.getLocalSymbols().size());  // params and locals
 	}
@@ -487,7 +487,6 @@ public class CodeGenerator extends VisitorAdaptor {
 			
 			if (classType == classObj.getType()) {
 				adrVirtualFUnctionsTable = classObj.getAdr();
-				System.out.println("vtf = " + classObj.getAdr());
 				break;
 			}
 		}
@@ -506,7 +505,6 @@ public class CodeGenerator extends VisitorAdaptor {
 		Struct classType = factorNewConstructor.getType().struct;
 		ArrayList<Struct> actualPars = constructorCallActualParamsStack.pop();
 
-		System.err.println("\nsuze" + actualPars.size());
 		Iterator<Obj> iter = definedClasses.iterator();
 		Obj classObj = null;
 		while(iter.hasNext()) {
@@ -520,11 +518,8 @@ public class CodeGenerator extends VisitorAdaptor {
 		boolean found = false;
 		
 		if (classObj != null) {
-			System.err.println(classObj.getName());
 			Collection<Obj> fileds = classObj.getType().getMembers();
-			System.err.println(fileds.size());
 			for (Obj constr : fileds) {
-				System.err.println("prc" + constr.getName());
 				if (isConstructor(constr.getName())) {
 					
 					Collection<Obj> formalParams = constr.getLocalSymbols();
@@ -547,7 +542,7 @@ public class CodeGenerator extends VisitorAdaptor {
 						formalObj = formalIter.next();
 						Struct formalParamStruct = formalObj.getType();
 						Struct actParamStruct = actIter.next();
-						if (!isCompatibleWithAssign(formalParamStruct, actParamStruct)) {
+						if (!isCompatibleWithAssign(actParamStruct, formalParamStruct)) {
 							break;
 						}
 						formalParamsCount--;
@@ -567,16 +562,6 @@ public class CodeGenerator extends VisitorAdaptor {
 		}
 		
 		if (found == true) {
-			System.err.println("uslouuuuuuuuuuu");
-//			// class method has to be invoken virtually
-//			Code.put(Code.getfield);
-//			Code.put2(0);				// first fields i vftp
-//			
-//			Code.put(Code.invokevirtual);
-//			System.err.println("kurac " + constructor.getName());
-//			for (char c : constructor.getName().toCharArray()) 
-//				Code.put4(c);
-//			Code.put4(-1);
 			int offset = constructor.getAdr() - Code.pc;
 			Code.put(Code.call);
 			Code.put2(offset);
@@ -610,20 +595,37 @@ public class CodeGenerator extends VisitorAdaptor {
 	@Override
 	public void visit(DesignatorMultiAssign designatorMultiAssign) {
 		Obj designatorObj = designatorMultiAssign.getDesignator().obj;
+		Code.load(designatorObj);
 		// obilazak sa desna na levo
 		for (int i = multiAssignList.size() - 1; i >= 0; i--) {
 			Obj multiDst = multiAssignList.get(i);
 			if (multiDst != null) {
-				System.err.println(multiDst.getName());
-			}
-			if (multiDst != null) {
-				Code.load(designatorObj);
+				if (multiDst.getKind() == Obj.Elem) {
+					// arr, ind, designatorarray
+					Code.put(Code.dup_x2);
+					// designatorarray, arr, ind, designatorarray
+				} 
+				else if (multiDst.getKind() == Obj.Fld) {
+					// obj, designatorarray
+					Code.put(Code.dup_x1);
+					// designatorarray, obj, designatorarray
+				}
+				else {
+					// designatorarray
+					Code.put(Code.dup);
+					// designatorarray, designatorarray
+				}
 				Code.loadConst(i);
+				// designatorarray, *, designatorarray, ind
 				Code.load(new Obj(Obj.Elem, designatorObj.getName(), designatorObj.getType().getElemType()));
+				// designatorarray, *, designatorarray[ind]
 				Code.store(multiDst);
+				// designatorarray
 			}
 		}
-		
+		// designatorarray
+		Code.put(Code.pop);
+		// nista
 		multiAssignList.clear();
 	}
 	
@@ -773,7 +775,7 @@ public class CodeGenerator extends VisitorAdaptor {
 		rightCondAdr.push(new ArrayList<>());
 		inverseCondAdr.push(new ArrayList<>());
 		breakCondAdr.push(new ArrayList<>());
-		whileAdr.push(Code.pc);
+		whileOrForeachBeginAdr.push(Code.pc);
 	}
 	
 	@Override
@@ -787,7 +789,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	@Override
 	public void visit(WhileStatement whileStatement) {
-		int adrBeginWhile = whileAdr.pop();
+		int adrBeginWhile = whileOrForeachBeginAdr.pop();
 		Code.putJump(adrBeginWhile);
 		
 		List<Integer> inverseAdr = inverseCondAdr.pop();
@@ -809,6 +811,78 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	@Override
+	public void visit(ForeachBegin  foreachBegin) {
+		foreachDepth++;
+		
+		rightCondAdr.push(new ArrayList<>());
+		inverseCondAdr.push(new ArrayList<>());
+		breakCondAdr.push(new ArrayList<>());
+		
+		Obj arrObj = foreachBegin.getDesignator().obj;
+		Code.load(arrObj);
+		// arr
+		Code.loadConst(0);
+		// arr, ind
+		
+		whileOrForeachBeginAdr.push(Code.pc); //ovdenak se vrces na sledeicu iterejciju foricha
+		
+		Code.put(Code.dup2);
+		// arr, ind, arr, ind
+		Code.put(Code.dup_x1);
+		// arr, ind, ind, arr, ind 
+		Code.put(Code.pop);
+		// arr, ind, ind, arr
+		Code.put(Code.arraylength);
+		// arr, ind, ind, len
+		Code.putFalseJump(Code.ne, 0);
+		// arr, ind	
+		List<Integer> adrs = inverseCondAdr.peek();			
+		adrs.add(Code.pc - 2);			
+		
+		Code.put(Code.dup2);
+		// arr, ind, arr, ind
+		Code.load(new Obj(Obj.Elem, arrObj.getName(), arrObj.getType().getElemType()));
+		// arr, ind, arr[ind]
+		Obj currentElem = foreachBegin.obj;
+		Code.store(currentElem);	// ident = arr[ind]
+		// arr, ind														
+	}
+	
+	@Override
+	public void visit(DesignatorForEach designatorForEach) {
+		foreachDepth--;
+		
+		Code.loadConst(1);	
+		// ind, 1
+		Code.put(Code.add);
+		// ind + 1
+		
+		int adrBeginForeach = whileOrForeachBeginAdr.pop();
+		Code.putJump(adrBeginForeach);		// next iteration foreach
+		
+		List<Integer> inverseAdr = inverseCondAdr.pop();
+		Iterator<Integer> iter = inverseAdr.iterator();
+		
+		while (iter.hasNext()) {
+			Integer adr = iter.next();
+			Code.fixup(adr);
+		}
+		
+		List<Integer> breakAdr = breakCondAdr.pop();
+		iter = breakAdr.iterator();
+		while (iter.hasNext()) {
+			Integer adr = iter.next();
+			Code.fixup(adr);
+		}
+		
+		rightCondAdr.pop();
+		
+		Code.put(Code.pop);
+		Code.put(Code.pop);
+		// arr & ind popped
+	}
+	
+	@Override
 	public void visit(BreakStatement breakStatement) {
 		Code.putJump(0);
 		breakCondAdr.peek().add(Code.pc - 2);
@@ -816,7 +890,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	@Override
 	public void visit(ContinueStatement continueStatement) {
-		Code.putJump(whileAdr.peek());
+		Code.putJump(whileOrForeachBeginAdr.peek());
 	}
 	
 	@Override

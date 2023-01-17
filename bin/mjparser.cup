@@ -79,9 +79,10 @@ nonterminal Statement, DesignatorStatement, DesignatorMultiBegin, DesignatorOrEp
 nonterminal IfCondition, Then, ElseOptional, WhileCondition, AndBegin, OrBegin, ElseBegin;
 nonterminal ActualPars, ActualParamList;
 nonterminal Assignop, Relop, Addop, Mulop, Label;
-nonterminal IfBegin, WhileBegin, ReadBegin, ReturnBegin, PrintBegin, ForeachBegin;
+nonterminal IfBegin, WhileBegin, ReadBegin, ReturnBegin, PrintBegin;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramName, ConstType, MethodTypeName, MethodDecl, Designator, ClassName, DesignatorArrayLBracket, MethodCallBegin, ConstructorCallBegin, ConstructorBegin;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgramName, ConstType, MethodTypeName, MethodDecl, Designator, ClassName, DesignatorArrayLBracket;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ForeachBegin, MethodCallBegin, ConstructorCallBegin, ConstructorBegin;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, ReturnType, Term, Expr, ExprOptional, Condition, Factor, CondTerm, CondFact, SingleTerm;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct DesignatorAssign, DesignatorOther, MethodCall;
 

@@ -13,4 +13,10 @@ public class TabSym extends Tab {
 		Tab.init();
 		currentScope.addToLocals(new Obj(Obj.Type, "bool", boolType));
 	}
+	
+	public static void dump()
+	{
+		dump(new TabSymVisitor());
+	}
+	
 }
